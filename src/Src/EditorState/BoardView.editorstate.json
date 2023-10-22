@@ -4368,7 +4368,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DailyCardGroup",
-      "ParentIndex": 38,
+      "ParentIndex": 36,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4419,7 +4419,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DailyCardGroup_1",
-      "ParentIndex": 40,
+      "ParentIndex": 38,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4487,7 +4487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Divider",
-      "ParentIndex": 37,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4853,7 +4853,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Header",
-      "ParentIndex": 8,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7583,7 +7583,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PopUpCloseIcon",
-      "ParentIndex": 6,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7944,7 +7944,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PopUpContentArea",
-      "ParentIndex": 4,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8174,7 +8174,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PopUpGroup",
-      "ParentIndex": 9,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8302,7 +8302,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PopUpMessageLabel",
-      "ParentIndex": 7,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8959,7 +8959,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PopUpTitleLabel",
-      "ParentIndex": 5,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10073,7 +10073,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RefinementCardGroup",
-      "ParentIndex": 39,
+      "ParentIndex": 37,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
