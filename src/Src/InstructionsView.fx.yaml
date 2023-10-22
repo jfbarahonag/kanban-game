@@ -10,10 +10,14 @@ InstructionsView As screen:
         ZIndex: =1
 
     Label2 As label:
-        Height: =550
-        Text: ="Texto"
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =20
+        Text: ="Game Rules"
         Width: =508
-        X: =388
-        Y: =76
+        X: =399
+        Y: =63
         ZIndex: =2
 
