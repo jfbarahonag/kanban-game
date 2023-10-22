@@ -1,9 +1,19 @@
 InstructionsView As screen:
 
     area As rectangle:
+        DisplayMode: =DisplayMode.Edit 
         Height: =679
+        OnSelect: =false 
         Width: =655
         X: =340
         Y: =40
         ZIndex: =1
+
+    Label2 As label:
+        Height: =550
+        Text: ="Texto"
+        Width: =508
+        X: =388
+        Y: =76
+        ZIndex: =2
 
