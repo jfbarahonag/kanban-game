@@ -1,0 +1,134 @@
+WelcomeView As screen:
+    OnVisible: |
+        =// Start temporal players config
+        ClearCollect(
+            Players,
+            Table(
+                {
+                    id: 1,
+                    name: "Player 1",
+                    winner: false
+                },
+                {
+                    id: 2,
+                    name: "Player 2",
+                    winner: false
+                }
+            )
+        );
+        // End temporal players config
+        
+        // Start rounds config
+        ClearCollect(
+            Rounds,
+            Table(
+                {
+                    id: 1,
+                    type: RoundType.PLANNING,
+                    name: "PLANNING"
+                },
+                {
+                    id: 2,
+                    type: RoundType.DAILY,
+                    name: "DAILY 1"
+                },
+                {
+                    id: 3,
+                    type: RoundType.DAILY,
+                    name: "DAILY 2"
+                },
+                {
+                    id: 4,
+                    type: RoundType.DAILY,
+                    name: "DAILY 3"
+                },
+                {
+                    id: 5,
+                    type: RoundType.DAILY,
+                    name: "DAILY 4"
+                },
+                {
+                    id: 6,
+                    type: RoundType.DAILY,
+                    name: "DAILY 5"
+                },
+                {
+                    id: 7,
+                    type: RoundType.DAILY,
+                    name: "DAILY 6"
+                },
+                {
+                    id: 8,
+                    type: RoundType.DAILY,
+                    name: "DAILY 7"
+                },
+                {
+                    id: 9,
+                    type: RoundType.REFINEMENT,
+                    name: "REFINEMENT"
+                },
+                {
+                    id: 10,
+                    type: RoundType.DAILY,
+                    name: "DAILY 8"
+                },
+                {
+                    id: 11,
+                    type: RoundType.REVIEW,
+                    name: "REVIEW"
+                },
+                {
+                    id: 12,
+                    type: RoundType.RETROSPECTIVE,
+                    name: "RETROSPECTIVE"
+                }
+            )
+        );
+        // End rounds config
+
+    StartButton As button:
+        OnSelect: |-
+            =Navigate(
+                PlayersView
+            )
+        Text: ="SELECT PLAYERS"
+        Width: =179
+        X: =1121
+        Y: =680
+        ZIndex: =3
+
+    InstructionButton As button:
+        OnSelect: =Navigate(InstructionsView, ScreenTransition.CoverRight);
+        Text: ="INSTRUCTIONS"
+        X: =50
+        Y: =680
+        ZIndex: =4
+
+    GameTitle As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =216
+            Width: =388
+            X: =472
+            Y: =144
+            ZIndex: =1
+
+        Title As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =216
+            Size: =32
+            Text: |-
+                ="SCRUMBAN
+                GAME"
+            Width: =388
+            X: =472
+            Y: =144
+            ZIndex: =2
+

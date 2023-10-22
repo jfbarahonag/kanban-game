@@ -1,0 +1,155 @@
+PlayersView As screen:
+    OnVisible: |-
+        =UpdateContext({
+            enableAdd: true
+        })
+
+    Rectangle5 As rectangle:
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =603
+        Width: =501
+        X: =441
+        Y: =108
+        ZIndex: =1
+
+    "PlayersGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =582
+        Items: =Players
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =96
+        Width: =476
+        X: =456
+        Y: =108
+        ZIndex: =2
+
+        PlayersHDivider As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        PlayersVDivider As rectangle:
+            Height: =Parent.TemplateHeight - PlayersHDivider.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        PlayersInput As text:
+            Default: =ThisItem.name
+            OnChange: |-
+                =Patch(
+                    Players,
+                    LookUp(
+                        Players,
+                        id = ThisItem.id
+                    ),
+                    {
+                        name: Self.Text
+                    }
+                )
+            OnSelect: =Select(Parent)
+            X: =111
+            Y: =37
+            ZIndex: =7
+
+        PlayersLabel As label:
+            Align: =Align.Right
+            OnSelect: =Select(Parent)
+            Text: ="Name"
+            Width: =63
+            X: =46
+            Y: =32
+            ZIndex: =8
+
+        PlayersId As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Text: =Concatenate(ThisItem.id, ")")
+            Width: =42
+            X: =4
+            Y: =32
+            ZIndex: =9
+
+    PlayersAddPlayerGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        PlayersAddArea As circle:
+            Fill: =RGBA(221, 79, 14, 1)
+            Height: =54
+            Visible: =enableAdd
+            Width: =54
+            X: =953
+            Y: =657
+            ZIndex: =3
+
+        PlayersAddButton As icon.Add:
+            Height: =34
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Collect(
+                    Players,
+                    {
+                        id: CountRows(Players) + 1,
+                        name: Concatenate("Player ", CountRows(Players) + 1)
+                    }
+                );
+                If(
+                    CountRows(Players) >= 6,
+                    UpdateContext({enableAdd: false})
+                )
+            Visible: =enableAdd
+            Width: =34
+            X: =963
+            Y: =667
+            ZIndex: =4
+
+    PlayersTitle As label:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(141, 198, 63, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =25
+        Text: ="Players configuration"
+        Width: =501
+        X: =441
+        Y: =47
+        ZIndex: =5
+
+    Button4 As button:
+        OnSelect: |-
+            =// Set the game players
+            ClearCollect(
+                GamePlayers,
+                Players
+            );
+            // Delete temporal players
+            // Clear(Players); //Uncomment in production
+            
+            // Navigate to Board view
+            Navigate(
+                BoardView,
+                ScreenTransition.UnCoverRight,
+                {
+                    totalPlayers: CountRows(GamePlayers),
+                    gameStatus: GameStatusType.NOT_STARTED,
+                    roundStatus: GameStatusType.NOT_STARTED,
+                    turnStatus: GameStatusType.NOT_STARTED
+                }
+            )
+        Text: ="Start Playing"
+        X: =1140
+        Y: =680
+        ZIndex: =6
+

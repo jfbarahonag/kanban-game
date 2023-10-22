@@ -1,0 +1,9 @@
+InstructionsView As screen:
+
+    area As rectangle:
+        Height: =679
+        Width: =655
+        X: =340
+        Y: =40
+        ZIndex: =1
+

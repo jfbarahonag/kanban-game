@@ -1,0 +1,2031 @@
+"BoardView As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |-
+        =// popup
+        UpdateContext(
+            {
+                popUpEnable: false, 
+                popUpTitle: "", 
+                popUpMessage: ""
+            }
+        );
+        
+        // token
+        UpdateContext(
+            {
+                tokenX: 80,
+                tokenY: 40
+            }
+        );
+        
+        // game
+        UpdateContext(
+            {
+                currentRound: 1,
+                currentTurn: 1,
+                maxTurn: totalPlayers
+            }
+        );
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =680
+        Width: =Parent.Width
+        Y: =RectQuickActionBar2.Y + RectQuickActionBar2.Height
+        ZIndex: =3
+
+        PLAYBOARD As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =392
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            RetrospectiveArea As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(54, 176, 75, 1)
+                Height: =48
+                X: =80
+                Y: =128
+                ZIndex: =2
+
+            RetrospectiveText As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="RETROSPECTIVE"
+                X: =80
+                Y: =128
+                ZIndex: =3
+
+            PlanningText As rectangle:
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                X: =80
+                Y: =80
+                ZIndex: =4
+
+            PlanningArea As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="PLANNING"
+                X: =80
+                Y: =80
+                ZIndex: =5
+
+            Daily1Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =230
+                Y: =80
+                ZIndex: =6
+
+            Daily1Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =230
+                Y: =80
+                ZIndex: =7
+
+            Daily2Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =380
+                Y: =80
+                ZIndex: =8
+
+            Daily2Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =380
+                Y: =80
+                ZIndex: =9
+
+            Daily3Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =530
+                Y: =80
+                ZIndex: =10
+
+            Daily3Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =530
+                Y: =80
+                ZIndex: =11
+
+            Daily4Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =530
+                Y: =128
+                ZIndex: =12
+
+            Daily4Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =530
+                Y: =128
+                ZIndex: =13
+
+            Daily5Text As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =530
+                Y: =176
+                ZIndex: =14
+
+            Daily5Area As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =530
+                Y: =176
+                ZIndex: =15
+
+            Daily6Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =530
+                Y: =224
+                ZIndex: =16
+
+            Daily6Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =530
+                Y: =224
+                ZIndex: =17
+
+            Daily7Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =380
+                Y: =224
+                ZIndex: =18
+
+            Daily7Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =380
+                Y: =224
+                ZIndex: =19
+
+            RefinementArea As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(201, 151, 0, 1)
+                Height: =48
+                X: =230
+                Y: =224
+                ZIndex: =20
+
+            RefinementText As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="REFINEMENT"
+                X: =230
+                Y: =224
+                ZIndex: =21
+
+            Daily8Area As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                X: =80
+                Y: =224
+                ZIndex: =22
+
+            Daily8Text As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="DAILY"
+                X: =80
+                Y: =224
+                ZIndex: =23
+
+            ReviewArea As rectangle:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =2
+                Fill: =RGBA(255, 157, 0, 1)
+                Height: =48
+                X: =80
+                Y: =176
+                ZIndex: =24
+
+            ReviewText As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Text: ="REVIEW"
+                X: =80
+                Y: =176
+                ZIndex: =25
+
+            TokenIcon As icon.Person:
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =40
+                Icon: =Icon.Person
+                Width: =30
+                X: =tokenX
+                Y: =tokenY
+                ZIndex: =26
+
+            DailyCardGroup As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =29
+
+                Rectangle7 As rectangle:
+                    Fill: =RGBA(0, 134, 208, 1)
+                    Height: =192
+                    X: =788
+                    Y: =80
+                    ZIndex: =27
+
+                Label9 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =124
+                    Text: |-
+                        ="DAILY
+                        IN PROCESS
+                        CARD"
+                    X: =788
+                    Y: =112
+                    ZIndex: =28
+
+            RefinementCardGroup As group:
+                Height: =5
+                Width: =5
+                X: =-728
+                Y: =-20
+                ZIndex: =31
+
+                Rectangle7_1 As rectangle:
+                    Fill: =RGBA(201, 151, 0, 1)
+                    Height: =192
+                    X: =973
+                    Y: =80
+                    ZIndex: =29
+
+                Label9_1 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =124
+                    Text: |-
+                        ="REFINEMENT
+                        CARD"
+                    X: =973
+                    Y: =112
+                    ZIndex: =30
+
+            Divider As rectangle:
+                Height: =1
+                Width: =1314
+                X: =20
+                Y: =391
+                ZIndex: =33
+
+            DailyCardGroup_1 As group:
+                Height: =5
+                Width: =5
+                X: =-728
+                Y: =-20
+                ZIndex: =33
+
+                Rectangle7_2 As rectangle:
+                    Fill: =RGBA(99, 139, 44, 1)
+                    Height: =192
+                    X: =1159
+                    Y: =80
+                    ZIndex: =31
+
+                Label9_2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =124
+                    Text: |-
+                        ="DAILY
+                        REVISION
+                        CARD"
+                    X: =1159
+                    Y: =112
+                    ZIndex: =32
+
+            RoundButton As button:
+                DisplayMode: |-
+                    =If(
+                        roundStatus = GameStatusType.NOT_STARTED,
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                Fill: =RGBA(118, 0, 0, 1)
+                OnSelect: |-
+                    =If(
+                        // ---------- Start game logic
+                        gameStatus = GameStatusType.NOT_STARTED,
+                        UpdateContext(
+                            {
+                                gameStatus: GameStatusType.STARTED,
+                                popUpEnable: true, 
+                                popUpTitle: "The game has just begun", 
+                                popUpMessage: "Please click on Start Round Button" 
+                            }
+                        ),
+                        // ---------- Start round logic
+                        // -------- Move token
+                        // If game not started
+                        If(
+                            And(tokenX = 80, tokenY = 40),
+                            UpdateContext(
+                                {
+                                    tokenX:tokenX + 120,
+                                    tokenY:tokenY + 44
+                                }
+                            ),
+                            // If token is moving up
+                            If(
+                                And(tokenX = 200, tokenY >= 132),
+                                UpdateContext({
+                                    tokenY: tokenY - 48
+                                }),
+                                // If token is moving left
+                                If(
+                                    And(tokenX <= 650, tokenY >= 228),
+                                    UpdateContext({
+                                        tokenX: tokenX - 150
+                                    }),
+                                    // If token is moving down
+                                    If(
+                                        And(tokenX = 650, tokenY >= 84),
+                                        UpdateContext({
+                                            tokenY: tokenY + 48
+                                        }),
+                                        // If token is moving right
+                                        If(
+                                            tokenY = 84,
+                                            UpdateContext({
+                                                tokenX: tokenX + 150
+                                            })
+                                        )
+                                    )
+                                )
+                            )
+                        );
+                        // -------- Enable turns
+                        UpdateContext({
+                            roundStatus:GameStatusType.STARTED,
+                            turnStatus: GameStatusType.NOT_STARTED
+                        });
+                        
+                    )
+                Text: |-
+                    =If(
+                        gameStatus = GameStatusType.NOT_STARTED,
+                        "Start Game",
+                        "Start Round"
+                    )
+                X: =110
+                Y: =311
+                ZIndex: =34
+
+            TurnButton As button:
+                DisplayMode: |-
+                    =If(
+                        And(roundStatus = GameStatusType.STARTED, turnStatus = GameStatusType.NOT_STARTED),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                Fill: =RGBA(18, 166, 166, 1)
+                OnSelect: |-
+                    =// Update status
+                    UpdateContext({
+                        turnStatus: GameStatusType.STARTED
+                    })
+                Text: ="Start Turn"
+                X: =295
+                Y: =311
+                ZIndex: =35
+
+            FinishTurnButton As button:
+                DisplayMode: |-
+                    =If(
+                        And(roundStatus = GameStatusType.STARTED, turnStatus = GameStatusType.STARTED),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                Fill: =RGBA(18, 166, 166, 1)
+                OnSelect: |-
+                    =If(
+                        // Round is over
+                        currentTurn = maxTurn,
+                        UpdateContext({
+                            currentTurn: 1,
+                            currentRound: currentRound + 1,
+                            roundStatus: GameStatusType.NOT_STARTED,
+                            turnStatus: GameStatusType.NOT_STARTED
+                        }),
+                        // Round continues
+                        UpdateContext({
+                            currentTurn: currentTurn + 1,
+                            turnStatus: GameStatusType.NOT_STARTED
+                        })
+                    )
+                Text: ="Finish Turn"
+                Width: =154
+                X: =489
+                Y: =311
+                ZIndex: =36
+
+            Label1 As label:
+                Text: =Index(Rounds, currentRound).name
+                X: =788
+                Y: =322
+                ZIndex: =38
+
+            Button1 As button:
+                OnSelect: |-
+                    =UpdateContext({
+                        popUpEnable: true,
+                        popUpMessage: "Testing"
+                    })
+                Text: ="Prueba"
+                X: =973
+                Y: =322
+                ZIndex: =39
+
+        KANBANBOARD As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =BacklogArea.Height + 30
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            KanbanBoardGroup As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =11
+
+                BacklogArea As rectangle:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: |-
+                        =// 895
+                        BacklogText.Height + 
+                        If(totalPlayers >= 1, 140, 0) +
+                        If(totalPlayers >= 2, 140, 0) +
+                        If(totalPlayers >= 3, 140, 0) +
+                        If(totalPlayers >= 4, 140, 0) +
+                        If(totalPlayers >= 5, 140, 0) +
+                        If(totalPlayers >= 6, 140, 0)
+                    Width: =220
+                    X: =131
+                    Y: =16
+                    ZIndex: =1
+
+                ToDoArea As rectangle:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: |-
+                        =BacklogText.Height + 
+                        If(totalPlayers >= 1, 140, 0) +
+                        If(totalPlayers >= 2, 140, 0) +
+                        If(totalPlayers >= 3, 140, 0) +
+                        If(totalPlayers >= 4, 140, 0) +
+                        If(totalPlayers >= 5, 140, 0) +
+                        If(totalPlayers >= 6, 140, 0)
+                    Width: =220
+                    X: =352
+                    Y: =16
+                    ZIndex: =2
+
+                InProcessArea As rectangle:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: |-
+                        =BacklogText.Height + 
+                        If(totalPlayers >= 1, 140, 0) +
+                        If(totalPlayers >= 2, 140, 0) +
+                        If(totalPlayers >= 3, 140, 0) +
+                        If(totalPlayers >= 4, 140, 0) +
+                        If(totalPlayers >= 5, 140, 0) +
+                        If(totalPlayers >= 6, 140, 0)
+                    Width: =220
+                    X: =572
+                    Y: =16
+                    ZIndex: =3
+
+                RevisionArea As rectangle:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: |-
+                        =BacklogText.Height + 
+                        If(totalPlayers >= 1, 140, 0) +
+                        If(totalPlayers >= 2, 140, 0) +
+                        If(totalPlayers >= 3, 140, 0) +
+                        If(totalPlayers >= 4, 140, 0) +
+                        If(totalPlayers >= 5, 140, 0) +
+                        If(totalPlayers >= 6, 140, 0)
+                    Width: =220
+                    X: =792
+                    Y: =16
+                    ZIndex: =4
+
+                CompletedArea As rectangle:
+                    BorderThickness: =2
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: |-
+                        =BacklogText.Height + 
+                        If(totalPlayers >= 1, 140, 0) +
+                        If(totalPlayers >= 2, 140, 0) +
+                        If(totalPlayers >= 3, 140, 0) +
+                        If(totalPlayers >= 4, 140, 0) +
+                        If(totalPlayers >= 5, 140, 0) +
+                        If(totalPlayers >= 6, 140, 0)
+                    Width: =220
+                    X: =1012
+                    Y: =16
+                    ZIndex: =5
+
+                BacklogText As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(153, 207, 236, 1)
+                    Height: =85
+                    Size: =25
+                    Text: ="Backlog"
+                    Width: =220
+                    X: =132
+                    Y: =16
+                    ZIndex: =6
+
+                ToDoText As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =85
+                    Size: =25
+                    Text: ="To Do"
+                    Width: =220
+                    X: =352
+                    Y: =16
+                    ZIndex: =7
+
+                InProcessText As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(251, 188, 159, 1)
+                    Height: =85
+                    Size: =25
+                    Text: ="In Process"
+                    Width: =220
+                    X: =572
+                    Y: =16
+                    ZIndex: =8
+
+                RevisionText As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(250, 247, 157, 1)
+                    Height: =85
+                    Size: =25
+                    Text: ="Revision"
+                    Width: =220
+                    X: =792
+                    Y: =16
+                    ZIndex: =9
+
+                CompletedText As label:
+                    Align: =Align.Center
+                    Fill: =RGBA(153, 160, 196, 1)
+                    Height: =85
+                    Size: =25
+                    Text: ="Completed"
+                    Width: =220
+                    X: =1012
+                    Y: =16
+                    ZIndex: =10
+
+            TasksT1Group As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =27
+
+                T1TkAArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =142
+                    Y: =114
+                    ZIndex: =11
+
+                T1TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="0"
+                    Width: =46
+                    X: =142
+                    Y: =114
+                    ZIndex: =12
+
+                T1TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =188
+                    Y: =114
+                    ZIndex: =13
+
+                T1TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task A"
+                    Width: =92
+                    X: =142
+                    Y: =136
+                    ZIndex: =14
+
+                T1TkBArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =249
+                    Y: =114
+                    ZIndex: =15
+
+                T1TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =249
+                    Y: =114
+                    ZIndex: =16
+
+                T1TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Width: =46
+                    X: =295
+                    Y: =114
+                    ZIndex: =17
+
+                T1TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task B"
+                    Width: =92
+                    X: =249
+                    Y: =136
+                    ZIndex: =18
+
+                T1TkCArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =142
+                    Y: =175
+                    ZIndex: =19
+
+                T1TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =142
+                    Y: =175
+                    ZIndex: =20
+
+                T1TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =188
+                    Y: =175
+                    ZIndex: =21
+
+                T1TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task C"
+                    Width: =92
+                    X: =142
+                    Y: =197
+                    ZIndex: =22
+
+                T1TkDArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =249
+                    Y: =175
+                    ZIndex: =23
+
+                T1TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =249
+                    Y: =175
+                    ZIndex: =24
+
+                T1TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =295
+                    Y: =175
+                    ZIndex: =25
+
+                T1TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task D "
+                    Width: =92
+                    X: =249
+                    Y: =197
+                    ZIndex: =26
+
+            TasksT2Group As group:
+                Height: =5
+                Width: =5
+                X: =-98
+                Y: =-65
+                ZIndex: =43
+
+                T2TkAArea As rectangle:
+                    Fill: =RGBA(109, 49, 162, 1)
+                    Height: =56
+                    Width: =92
+                    X: =142
+                    Y: =245
+                    ZIndex: =27
+
+                T2TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =142
+                    Y: =245
+                    ZIndex: =28
+
+                T2TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =188
+                    Y: =245
+                    ZIndex: =29
+
+                T2TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task A"
+                    Width: =92
+                    X: =142
+                    Y: =267
+                    ZIndex: =30
+
+                T2TkBArea As rectangle:
+                    Fill: =RGBA(109, 49, 162, 1)
+                    Height: =56
+                    Width: =92
+                    X: =249
+                    Y: =245
+                    ZIndex: =31
+
+                T2TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =249
+                    Y: =245
+                    ZIndex: =32
+
+                T2TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Width: =46
+                    X: =295
+                    Y: =245
+                    ZIndex: =33
+
+                T2TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task B"
+                    Width: =92
+                    X: =249
+                    Y: =267
+                    ZIndex: =34
+
+                T2TkCArea As rectangle:
+                    Fill: =RGBA(109, 49, 162, 1)
+                    Height: =56
+                    Width: =92
+                    X: =142
+                    Y: =306
+                    ZIndex: =35
+
+                T2TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =142
+                    Y: =306
+                    ZIndex: =36
+
+                T2TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =188
+                    Y: =306
+                    ZIndex: =37
+
+                T2TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task C"
+                    Width: =92
+                    X: =142
+                    Y: =328
+                    ZIndex: =38
+
+                T2TkDArea As rectangle:
+                    Fill: =RGBA(109, 49, 162, 1)
+                    Height: =56
+                    Width: =92
+                    X: =249
+                    Y: =306
+                    ZIndex: =39
+
+                T2TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Width: =46
+                    X: =249
+                    Y: =306
+                    ZIndex: =40
+
+                T2TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Width: =46
+                    X: =295
+                    Y: =306
+                    ZIndex: =41
+
+                T2TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task D "
+                    Width: =92
+                    X: =249
+                    Y: =328
+                    ZIndex: =42
+
+            TasksT3Group As group:
+                Height: =5
+                Width: =5
+                X: =-98
+                Y: =-198
+                ZIndex: =59
+
+                T3TkAArea As rectangle:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =142
+                    Y: =373
+                    ZIndex: =43
+
+                T3TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =142
+                    Y: =373
+                    ZIndex: =44
+
+                T3TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =188
+                    Y: =373
+                    ZIndex: =45
+
+                T3TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task A"
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =142
+                    Y: =395
+                    ZIndex: =46
+
+                T3TkBArea As rectangle:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =249
+                    Y: =373
+                    ZIndex: =47
+
+                T3TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =249
+                    Y: =373
+                    ZIndex: =48
+
+                T3TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =295
+                    Y: =373
+                    ZIndex: =49
+
+                T3TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task B"
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =249
+                    Y: =395
+                    ZIndex: =50
+
+                T3TkCArea As rectangle:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =142
+                    Y: =434
+                    ZIndex: =51
+
+                T3TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =142
+                    Y: =434
+                    ZIndex: =52
+
+                T3TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =188
+                    Y: =434
+                    ZIndex: =53
+
+                T3TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task C"
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =142
+                    Y: =456
+                    ZIndex: =54
+
+                T3TkDArea As rectangle:
+                    Fill: =RGBA(54, 176, 75, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =249
+                    Y: =434
+                    ZIndex: =55
+
+                T3TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =249
+                    Y: =434
+                    ZIndex: =56
+
+                T3TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 3
+                    Width: =46
+                    X: =295
+                    Y: =434
+                    ZIndex: =57
+
+                T3TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task D "
+                    Visible: =totalPlayers >= 3
+                    Width: =92
+                    X: =249
+                    Y: =456
+                    ZIndex: =58
+
+            TasksT4Group As group:
+                Height: =5
+                Width: =5
+                X: =-98
+                Y: =-332
+                ZIndex: =75
+
+                T4TkAArea As rectangle:
+                    Fill: =RGBA(184, 0, 0, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =142
+                    Y: =507
+                    ZIndex: =59
+
+                T4TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =142
+                    Y: =507
+                    ZIndex: =60
+
+                T4TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =188
+                    Y: =507
+                    ZIndex: =61
+
+                T4TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task A"
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =142
+                    Y: =529
+                    ZIndex: =62
+
+                T4TkBArea As rectangle:
+                    Fill: =RGBA(184, 0, 0, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =249
+                    Y: =507
+                    ZIndex: =63
+
+                T4TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =249
+                    Y: =507
+                    ZIndex: =64
+
+                T4TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =295
+                    Y: =507
+                    ZIndex: =65
+
+                T4TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task B"
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =249
+                    Y: =529
+                    ZIndex: =66
+
+                T4TkCArea As rectangle:
+                    Fill: =RGBA(184, 0, 0, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =142
+                    Y: =568
+                    ZIndex: =67
+
+                T4TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =142
+                    Y: =568
+                    ZIndex: =68
+
+                T4TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =188
+                    Y: =568
+                    ZIndex: =69
+
+                T4TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task C"
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =142
+                    Y: =590
+                    ZIndex: =70
+
+                T4TkDArea As rectangle:
+                    Fill: =RGBA(184, 0, 0, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =249
+                    Y: =568
+                    ZIndex: =71
+
+                T4TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =249
+                    Y: =568
+                    ZIndex: =72
+
+                T4TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 4
+                    Width: =46
+                    X: =295
+                    Y: =568
+                    ZIndex: =73
+
+                T4TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task D "
+                    Visible: =totalPlayers >= 4
+                    Width: =92
+                    X: =249
+                    Y: =590
+                    ZIndex: =74
+
+            TasksT5Group As group:
+                Height: =5
+                Width: =5
+                X: =-98
+                Y: =-467
+                ZIndex: =91
+
+                T5TkAArea As rectangle:
+                    Fill: =RGBA(116, 116, 116, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =142
+                    Y: =642
+                    ZIndex: =75
+
+                T5TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =142
+                    Y: =642
+                    ZIndex: =76
+
+                T5TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =188
+                    Y: =642
+                    ZIndex: =77
+
+                T5TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task A"
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =142
+                    Y: =664
+                    ZIndex: =78
+
+                T5TkBArea As rectangle:
+                    Fill: =RGBA(116, 116, 116, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =249
+                    Y: =642
+                    ZIndex: =79
+
+                T5TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =249
+                    Y: =642
+                    ZIndex: =80
+
+                T5TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =295
+                    Y: =642
+                    ZIndex: =81
+
+                T5TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task B"
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =249
+                    Y: =664
+                    ZIndex: =82
+
+                T5TkCArea As rectangle:
+                    Fill: =RGBA(116, 116, 116, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =142
+                    Y: =703
+                    ZIndex: =83
+
+                T5TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =142
+                    Y: =703
+                    ZIndex: =84
+
+                T5TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =188
+                    Y: =703
+                    ZIndex: =85
+
+                T5TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task C"
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =142
+                    Y: =725
+                    ZIndex: =86
+
+                T5TkDArea As rectangle:
+                    Fill: =RGBA(116, 116, 116, 1)
+                    Height: =56
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =249
+                    Y: =703
+                    ZIndex: =87
+
+                T5TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =249
+                    Y: =703
+                    ZIndex: =88
+
+                T5TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 5
+                    Width: =46
+                    X: =295
+                    Y: =703
+                    ZIndex: =89
+
+                T5TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: ="Task D "
+                    Visible: =totalPlayers >= 5
+                    Width: =92
+                    X: =249
+                    Y: =725
+                    ZIndex: =90
+
+            Team1Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: =Index(GamePlayers, 1).name
+                Width: =117
+                X: =6
+                Y: =114
+                ZIndex: =107
+
+            TasksT6Group As group:
+                Height: =5
+                Width: =5
+                X: =-102
+                Y: =-602
+                ZIndex: =107
+
+                T6TkAArea As rectangle:
+                    Fill: =RGBA(221, 79, 14, 1)
+                    Height: =52
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =142
+                    Y: =779
+                    ZIndex: =91
+
+                T6TkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =142
+                    Y: =779
+                    ZIndex: =92
+
+                T6TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =188
+                    Y: =779
+                    ZIndex: =93
+
+                T6TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: ="Task A"
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =142
+                    Y: =801
+                    ZIndex: =94
+
+                T6TkBArea As rectangle:
+                    Fill: =RGBA(221, 79, 14, 1)
+                    Height: =52
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =249
+                    Y: =779
+                    ZIndex: =95
+
+                T6TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =249
+                    Y: =779
+                    ZIndex: =96
+
+                T6TkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="3"
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =295
+                    Y: =779
+                    ZIndex: =97
+
+                T6TkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: ="Task B"
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =249
+                    Y: =801
+                    ZIndex: =98
+
+                T6TkCArea As rectangle:
+                    Fill: =RGBA(221, 79, 14, 1)
+                    Height: =52
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =142
+                    Y: =835
+                    ZIndex: =99
+
+                T6TkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =142
+                    Y: =835
+                    ZIndex: =100
+
+                T6TkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =188
+                    Y: =835
+                    ZIndex: =101
+
+                T6TkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: ="Task C"
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =142
+                    Y: =857
+                    ZIndex: =102
+
+                T6TkDArea As rectangle:
+                    Fill: =RGBA(221, 79, 14, 1)
+                    Height: =52
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =249
+                    Y: =835
+                    ZIndex: =103
+
+                T6TkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        ="0
+                        "
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =249
+                    Y: =835
+                    ZIndex: =104
+
+                T6TkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="5"
+                    Visible: =totalPlayers >= 6
+                    Width: =46
+                    X: =295
+                    Y: =835
+                    ZIndex: =105
+
+                T6TkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =30
+                    Text: ="Task D "
+                    Visible: =totalPlayers >= 6
+                    Width: =92
+                    X: =249
+                    Y: =857
+                    ZIndex: =106
+
+            Team2Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: =Index(GamePlayers, 2).name
+                Width: =117
+                Y: =245
+                ZIndex: =108
+
+            Team3Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: |-
+                    =If(
+                        totalPlayers >= 3,
+                        Index(GamePlayers, 3).name,
+                        ""
+                    )
+                Visible: =totalPlayers >= 3
+                Width: =117
+                X: =6
+                Y: =373
+                ZIndex: =109
+
+            Team4Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: |-
+                    =If(
+                        totalPlayers >= 4,
+                        Index(GamePlayers, 4).name,
+                        ""
+                    )
+                Visible: =totalPlayers >= 4
+                Width: =117
+                X: =6
+                Y: =507
+                ZIndex: =110
+
+            Team5Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: |-
+                    =If(
+                        totalPlayers >= 5,
+                        Index(GamePlayers, 5).name,
+                        ""
+                    )
+                Visible: =totalPlayers >= 5
+                Width: =117
+                X: =6
+                Y: =643
+                ZIndex: =111
+
+            Team6Name As label:
+                Align: =Align.Center
+                Height: =117
+                Text: |-
+                    =If(
+                        totalPlayers >= 6,
+                        Index(GamePlayers, 6).name,
+                        ""
+                    )
+                Visible: =totalPlayers >= 6
+                Width: =117
+                X: =6
+                Y: =774
+                ZIndex: =112
+
+    Header As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        RectQuickActionBar2 As rectangle:
+            Height: =88
+            Width: =Parent.Width
+            ZIndex: =1
+
+        LblAppName2 As label:
+            Align: =Align.Center
+            Height: =88
+            Text: ="Board Game"
+            Width: =Parent.Width
+            ZIndex: =2
+
+    PopUpGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        PopUpAllArea As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.43)
+            Height: =680
+            Visible: =popUpEnable
+            Width: =1366
+            Y: =88
+            ZIndex: =4
+
+        PopUpContentArea As rectangle:
+            Height: =312
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =272
+            ZIndex: =5
+
+        PopUpTitleLabel As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =71
+            Text: =popUpTitle
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =272
+            ZIndex: =6
+
+        PopUpMessageLabel As label:
+            Align: =Align.Center
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =241
+            Text: =popUpMessage
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =343
+            ZIndex: =7
+
+        PopUpCloseIcon As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    popUpEnable: false,
+                    popUpTitle: "",
+                    popUpMessage: ""
+                })
+            Visible: =popUpEnable
+            Width: =50
+            X: =855
+            Y: =282
+            ZIndex: =8
+

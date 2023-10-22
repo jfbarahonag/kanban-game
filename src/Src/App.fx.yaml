@@ -1,0 +1,29 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =// Start Types
+        Set(
+            GameStatusType,
+            {NOT_STARTED: 1, STARTED: 2}
+        );
+        
+        Set(
+            RoundType,
+            {
+                PLANNING: 1, 
+                DAILY: 2,
+                REFINEMENT: 3,
+                REVIEW: 4,
+                RETROSPECTIVE: 5
+            }
+        );
+        // End Types
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+
