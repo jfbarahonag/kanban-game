@@ -511,6 +511,17 @@
                 Y: =322
                 ZIndex: =39
 
+            Button1_1 As button:
+                OnSelect: |-
+                    =UpdateContext({
+                        popUpEnable: true,
+                        popUpMessage: "Testing"
+                    })
+                Text: ="Prueba2"
+                X: =1159
+                Y: =322
+                ZIndex: =40
+
         KANBANBOARD As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
