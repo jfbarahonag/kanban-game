@@ -36,7 +36,7 @@ InstructionsView As screen:
             4.	When the token is placed in the DAILY box:
               4.1.	If the box is after a PLANNING box, move the tasks you decide to the In-PROCESS column.
               4.2.	If the box is NOT after a PLANNING box, add 1 to the task counter in the duration unit and select a Daily type card.
-              4.3.	If the duration unit (UD or SP) is less than or equal to zero, the task must be moved to the Review column.
+              4.3.	If the story point is less than or equal to story counter, the task must be moved to the Review column.
               4.4.	If the task is in the Review column, draw a Daily Revision type card.
             5.	When the token is placed in the REFINEMENT box, draw a Refinement type card, and update the Story Point of the task.
             6.	When the token is placed in the REVIEW box:
