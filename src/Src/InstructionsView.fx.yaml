@@ -16,7 +16,7 @@ InstructionsView As screen:
         Height: =66
         Size: =30
         Text: |-
-            ="Game Rules
+            ="Instructions
             "
         Width: =1123
         X: =99
