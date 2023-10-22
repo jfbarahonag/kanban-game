@@ -98,7 +98,6 @@ WelcomeView As screen:
         ZIndex: =3
 
     InstructionButton As button:
-        DisplayMode: =DisplayMode.Edit jhdjhdjshjdhsjdh
         OnSelect: =Navigate(InstructionsView, ScreenTransition.CoverRight);
         Text: ="INSTRUCTIONS"
         X: =50
