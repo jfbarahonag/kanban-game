@@ -3,7 +3,14 @@
     "area": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Fill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Fill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledFill",
         "PressedFill",
         "HoverFill",
@@ -137,7 +144,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "Icon1": {
+    "Icon2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -180,7 +187,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon1",
+      "Name": "Icon2",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
