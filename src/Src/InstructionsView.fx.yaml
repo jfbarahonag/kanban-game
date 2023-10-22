@@ -42,7 +42,7 @@ InstructionsView As screen:
             6.	When the token is placed in the REVIEW box:
               6.1.       If all tasks (Task Cards) are in the COMPLETED column, you can reduce one day from one of the tasks you have in the BACKLOG column.
               6.2.      If there are tasks in columns other than COMPLETED, they must be returned to the Backlog column, if it is in the REVIEW column, add 1 (+1) to the story counter.
-            7.	When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the duration unit of any of the tasks in any other player’s Backlog column.
+            7.	When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the story point of any of the tasks in any other player’s Backlog column.
             8.	If a person who requests or delivers FT already has their tasks completed in SPRINT, this action is omitted."
         Width: =947
         X: =99
