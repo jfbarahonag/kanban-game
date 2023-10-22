@@ -96,7 +96,7 @@ PlayersView As screen:
         PlayersAddButton As icon.Add:
             Height: =34
             Icon: =Icon.Add
-            OnSelect: |-
+            OnSelect: |+
                 =Collect(
                     Players,
                     {
@@ -104,10 +104,40 @@ PlayersView As screen:
                         name: Concatenate("Player ", CountRows(Players) + 1)
                     }
                 );
+                
+                Collect(
+                    Tasks,
+                    {
+                        team: CountRows(Players),
+                        SP: 5,
+                        counter: 0,
+                        name: "Task A"
+                    },
+                    {
+                        team: CountRows(Players),
+                        SP: 5,
+                        counter: 0,
+                        name: "Task B"
+                    },
+                    {
+                        team: CountRows(Players),
+                        SP: 5,
+                        counter: 0,
+                        name: "Task C"
+                    },
+                    {
+                        team: CountRows(Players),
+                        SP: 5,
+                        counter: 0,
+                        name: "Task D"
+                    }
+                );
+                
                 If(
                     CountRows(Players) >= 6,
                     UpdateContext({enableAdd: false})
                 )
+                
             Visible: =enableAdd
             Width: =34
             X: =963
