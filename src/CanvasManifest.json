@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 1,
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -111,13 +111,13 @@
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "67408087-7688-4e5d-9dda-5349ae5ab542",
-    "Id": "67408087-7688-4e5d-9dda-5349ae5ab542",
+    "Id": "05318c53-30b0-4f1a-bd81-fc3d8432aaeb",
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "SCRUMBAN GAME - copy",
+    "Name": "SCRUMBAN%2BGAME%2B-%2Bcopy.msapp",
     "OriginatingVersion": "1.334",
-    "ParserErrorCount": 2,
+    "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {

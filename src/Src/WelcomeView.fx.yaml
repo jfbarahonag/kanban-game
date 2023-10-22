@@ -1,5 +1,5 @@
 WelcomeView As screen:
-    OnVisible: |
+    OnVisible: |+
         =// Start temporal players config
         ClearCollect(
             Players,
@@ -85,6 +85,63 @@ WelcomeView As screen:
             )
         );
         // End rounds config
+        
+        // Start tasks config
+        ClearCollect(
+            Tasks,
+            Table(
+                {
+                    team: 1,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task A"
+                },
+                {
+                    team: 1,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task B"
+                },
+                {
+                    team: 1,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task C"
+                },
+                {
+                    team: 1,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task D"
+                },
+                {
+                    team: 2,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task A"
+                },
+                {
+                    team: 2,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task B"
+                },
+                {
+                    team: 2,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task C"
+                },
+                {
+                    team: 2,
+                    SP: 5,
+                    counter: 0,
+                    name: "Task D"
+                }
+            )
+        );
+        // End tasks config
+        
 
     StartButton As button:
         OnSelect: |-
@@ -98,7 +155,6 @@ WelcomeView As screen:
         ZIndex: =3
 
     InstructionButton As button:
-        DisplayMode: =DisplayMode.Edit jhdjhdjshjdhsjdh
         OnSelect: =Navigate(InstructionsView, ScreenTransition.CoverRight);
         Text: ="INSTRUCTIONS"
         X: =50
