@@ -4,8 +4,8 @@ InstructionsView As screen:
         DisplayMode: =DisplayMode.Edit 
         Height: =679
         OnSelect: =false 
-        Width: =655
-        X: =340
+        Width: =1123
+        X: =99
         Y: =40
         ZIndex: =1
 
@@ -14,10 +14,37 @@ InstructionsView As screen:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Height: =66
-        Size: =20
-        Text: ="Game Rules"
-        Width: =508
-        X: =399
-        Y: =63
+        Size: =30
+        Text: |-
+            ="Game Rules
+            "
+        Width: =1123
+        X: =99
+        Y: =40
         ZIndex: =2
+
+    Label3 As label:
+        Align: =Align.Justify
+        AutoHeight: =true
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =566
+        Size: =18
+        Text: |-
+            ="1. At the start of the game, each player’s tasks are placed in the BACKLOG column. 
+            2. Select at least 2 tasks per SPRINT, unless there is only one task left to execute.
+            3. When the token is placed in the PLANNING box, the tasks to be developed in the sprint must be moved to the ToDo column.
+            4. When the token is placed in the DAILY box:3.1. If the box is after a PLANNING box, move the tasks you decide to the In PROCESS column.3.2. If the box is NOT after a PLANNING box, subtract 1 (-1) from the duration unit and draw a Daily type card.
+            5. If the duration unit (UD or SP) reaches 0, the task must be moved to the Review column.
+            6. If the task is in the Review column, draw a Daily Revision type card.
+            7. When the token is placed in the REFINEMENT box, draw a Refinement type card.
+            8. When the token is placed in the REVIEW box:5.1. If all tasks (Task Cards) are in the COMPLETED column, you can reduce one day from one of the tasks you have in the BACKLOG column.
+            9. If there are tasks in columns other than COMPLETED, they must be returned to the Backlog column, if it is in the REVIEW column, add 1 (+1) to the duration unit.
+            10. When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the duration unit of any of the tasks in any other player’s Backlog column.
+            11. If the person who asks for or gives FT already has their tasks completed in SPRINT, this action is omitted.
+            
+            "
+        Width: =1078
+        X: =121
+        Y: =136
+        ZIndex: =3
 
