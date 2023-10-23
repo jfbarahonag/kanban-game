@@ -36,13 +36,13 @@ InstructionsView As screen:
             4.	When the token is placed in the DAILY box:
               4.1.	If the box is after a PLANNING box, move the tasks you decide to the In-PROCESS column.
               4.2.	If the box is NOT after a PLANNING box, add 1 to the task counter in the duration unit and select a Daily type card.
-              4.3.	If the duration unit (UD or SP) is less than or equal to zero, the task must be moved to the Review column.
+              4.3.	If the story point is less than or equal to story counter, the task must be moved to the Review column.
               4.4.	If the task is in the Review column, draw a Daily Revision type card.
             5.	When the token is placed in the REFINEMENT box, draw a Refinement type card, and update the Story Point of the task.
             6.	When the token is placed in the REVIEW box:
               6.1.       If all tasks (Task Cards) are in the COMPLETED column, you can reduce one day from one of the tasks you have in the BACKLOG column.
-              6.2.      If there are tasks in columns other than COMPLETED, they must be returned to the Backlog column, if it is in the REVIEW column, add 1 (+1) to the duration unit.
-            7.	When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the duration unit of any of the tasks in any other player’s Backlog column.
+              6.2.      If there are tasks in columns other than COMPLETED, they must be returned to the Backlog column, if it is in the REVIEW column, add 1 (+1) to the story counter.
+            7.	When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the story point of any of the tasks in any other player’s Backlog column.
             8.	If a person who requests or delivers FT already has their tasks completed in SPRINT, this action is omitted."
         Width: =947
         X: =99
