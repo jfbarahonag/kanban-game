@@ -3484,7 +3484,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =241
-            Text: ="Please move the tasks to be developed in this Sprint during your turn"
+            Text: =popUpMessage
             Visible: =popUpEnable
             Width: =469
             X: =448
