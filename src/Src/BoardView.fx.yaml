@@ -32,6 +32,66 @@
                 maxTurn: totalPlayers
             }
         );
+        
+        // kanban board
+        UpdateContext(
+            {
+                // team 1
+                team1TaskAX: 142,
+                team1TaskAY: 114 + 131*0,
+                team1TaskBX: 249,
+                team1TaskBY: 114 + 131*0,
+                team1TaskCX: 142,
+                team1TaskCY: 114 + 131*0 + 61,
+                team1TaskDX: 249,
+                team1TaskDY: 114 + 131*0 + 61,
+                // team 2
+                team2TaskAX: 142,
+                team2TaskAY: 114 + 131*1,
+                team2TaskBX: 249,
+                team2TaskBY: 114 + 131*1,
+                team2TaskCX: 142,
+                team2TaskCY: 114 + 131*1 + 61,
+                team2TaskDX: 249,
+                team2TaskDY: 114 + 131*1 + 61,
+                // team 3
+                team3TaskAX: 142,
+                team3TaskAY: 114 + 131*2,
+                team3TaskBX: 249,
+                team3TaskBY: 114 + 131*2,
+                team3TaskCX: 142,
+                team3TaskCY: 114 + 131*2 + 61,
+                team3TaskDX: 249,
+                team3TaskDY: 114 + 131*2 + 61,
+                // team 4
+                team4TaskAX: 142,
+                team4TaskAY: 114 + 131*3,
+                team4TaskBX: 249,
+                team4TaskBY: 114 + 131*3,
+                team4TaskCX: 142,
+                team4TaskCY: 114 + 131*3 + 61,
+                team4TaskDX: 249,
+                team4TaskDY: 114 + 131*3 + 61,
+                // team 5
+                team5TaskAX: 142,
+                team5TaskAY: 114 + 131*4,
+                team5TaskBX: 249,
+                team5TaskBY: 114 + 131*4,
+                team5TaskCX: 142,
+                team5TaskCY: 114 + 131*4 + 61,
+                team5TaskDX: 249,
+                team5TaskDY: 114 + 131*4 + 61,
+                // team 6
+                team6TaskAX: 142,
+                team6TaskAY: 114 + 131*5,
+                team6TaskBX: 249,
+                team6TaskBY: 114 + 131*5,
+                team6TaskCX: 142,
+                team6TaskCY: 114 + 131*5 + 61,
+                team6TaskDX: 249,
+                team6TaskDY: 114 + 131*5 + 61
+            }
+        );
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
@@ -506,8 +566,16 @@
                                 popUpTitle: Index(Rounds, currentRound).name,
                                 popUpMessage: "Please move the tasks to handle in this Sprint during your turn"
                             })
-                            ,
-                            true
+                        );
+                    
+                        If(
+                            // IS DAILY
+                            Index(Rounds, currentRound).type = RoundType.DAILY,
+                            UpdateContext({
+                                popUpEnable: true,
+                                popUpTitle: Index(Rounds, currentRound).name,
+                                popUpMessage: "Please select the task to be developed during this Sprint"
+                            })
                         );
                     )
                 Text: |-
@@ -574,12 +642,6 @@
                 X: =489
                 Y: =311
                 ZIndex: =36
-
-            Label1 As label:
-                Text: =Index(Rounds, currentRound).name
-                X: =788
-                Y: =322
-                ZIndex: =38
 
         KANBANBOARD As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -745,54 +807,23 @@
                 T1TkAArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =142
-                    Y: =114
+                    X: |-
+                        =team1TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            220,
+                            0
+                        )
+                    Y: =team1TaskAY
                     ZIndex: =11
 
                 T1TkACounter As label:
-                    Align: =Align.Center
-                    BorderThickness: =1
-                    Color: =RGBA(255, 255, 255, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =22
-                    Text: =Index(Tasks, 1).counter
-                    Width: =46
-                    X: =142
-                    Y: =114
-                    ZIndex: =12
-
-                T1TkASP As label:
-                    Align: =Align.Center
-                    BorderThickness: =1
-                    Color: =RGBA(255, 255, 255, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =22
-                    Text: =Index(Tasks, 1).SP
-                    Width: =46
-                    X: =188
-                    Y: =114
-                    ZIndex: =13
-
-                T1TkADescription As label:
-                    Align: =Align.Center
-                    BorderThickness: =1
-                    Color: =RGBA(255, 255, 255, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =34
-                    Text: =Index(Tasks, 1).name
-                    Width: =92
-                    X: =142
-                    Y: =136
-                    ZIndex: =14
-
-                T1TkBArea As rectangle:
-                    Height: =56
-                    Width: =92
-                    X: =249
-                    Y: =114
-                    ZIndex: =15
-
-                T1TkBCounter As label:
                     Align: =Align.Center
                     BorderThickness: =1
                     Color: =RGBA(255, 255, 255, 1)
@@ -804,7 +835,122 @@
                             name = "Task A"
                         ).counter
                     Width: =46
-                    X: =249
+                    X: |-
+                        =team1TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =114
+                    ZIndex: =12
+
+                T1TkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task A"
+                        ).SP
+                    Width: =46
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =114
+                    ZIndex: =13
+
+                T1TkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task A"
+                        ).name
+                    Width: =92
+                    X: |-
+                        =team1TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =136
+                    ZIndex: =14
+
+                T1TkBArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: |-
+                        =team1TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            220,
+                            0
+                        )
+                    Y: =team1TaskBY
+                    ZIndex: =15
+
+                T1TkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task B"
+                        ).counter
+                    Width: =46
+                    X: |-
+                        =team1TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =114
                     ZIndex: =16
 
@@ -817,10 +963,22 @@
                     Text: |-
                         =LookUp(
                             Filter(Tasks, team = 1),
-                            name = "Task A"
+                            name = "Task B"
                         ).SP
                     Width: =46
-                    X: =295
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =114
                     ZIndex: =17
 
@@ -836,15 +994,39 @@
                             name = "Task B"
                         ).name
                     Width: =92
-                    X: =249
+                    X: |-
+                        =249 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =136
                     ZIndex: =18
 
                 T1TkCArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =142
-                    Y: =175
+                    X: |-
+                        =team1TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team1TaskCY
                     ZIndex: =19
 
                 T1TkCCounter As label:
@@ -854,10 +1036,24 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).counter
                     Width: =46
-                    X: =142
+                    X: |-
+                        =team1TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =175
                     ZIndex: =20
 
@@ -867,9 +1063,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).SP
                     Width: =46
-                    X: =188
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =175
                     ZIndex: =21
 
@@ -879,17 +1091,45 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).name
                     Width: =92
-                    X: =142
+                    X: |-
+                        =team1TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =197
                     ZIndex: =22
 
                 T1TkDArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =249
-                    Y: =175
+                    X: |-
+                        =team1TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team1TaskDY
                     ZIndex: =23
 
                 T1TkDCounter As label:
@@ -899,10 +1139,24 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).counter
                     Width: =46
-                    X: =249
+                    X: |-
+                        =team1TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =175
                     ZIndex: =24
 
@@ -912,9 +1166,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).SP
                     Width: =46
-                    X: =295
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =175
                     ZIndex: =25
 
@@ -924,9 +1194,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).name
                     Width: =92
-                    X: =249
+                    X: |-
+                        =249 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 1
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =197
                     ZIndex: =26
 
@@ -941,8 +1227,20 @@
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
                     Width: =92
-                    X: =142
-                    Y: =245
+                    X: |-
+                        =team2TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskAY
                     ZIndex: =27
 
                 T2TkACounter As label:
@@ -952,10 +1250,24 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task A"
+                        ).counter
                     Width: =46
-                    X: =142
+                    X: |-
+                        =team2TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =245
                     ZIndex: =28
 
@@ -965,9 +1277,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task A"
+                        ).SP
                     Width: =46
-                    X: =188
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =245
                     ZIndex: =29
 
@@ -977,9 +1305,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task A"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task A"
+                        ).name
                     Width: =92
-                    X: =142
+                    X: |-
+                        =team2TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =267
                     ZIndex: =30
 
@@ -987,8 +1331,20 @@
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
                     Width: =92
-                    X: =249
-                    Y: =245
+                    X: |-
+                        =team2TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskBY
                     ZIndex: =31
 
                 T2TkBCounter As label:
@@ -998,10 +1354,24 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task B"
+                        ).counter
                     Width: =46
-                    X: =249
+                    X: |-
+                        =team2TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =245
                     ZIndex: =32
 
@@ -1011,9 +1381,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="3"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task B"
+                        ).SP
                     Width: =46
-                    X: =295
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =245
                     ZIndex: =33
 
@@ -1023,9 +1409,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task B"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task B"
+                        ).name
                     Width: =92
-                    X: =249
+                    X: |-
+                        =team2TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =267
                     ZIndex: =34
 
@@ -1033,8 +1435,20 @@
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
                     Width: =92
-                    X: =142
-                    Y: =306
+                    X: |-
+                        =team2TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskCY
                     ZIndex: =35
 
                 T2TkCCounter As label:
@@ -1044,11 +1458,25 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task C"
+                        ).counter
                     Width: =46
-                    X: =142
-                    Y: =306
+                    X: |-
+                        =team2TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskCY
                     ZIndex: =36
 
                 T2TkCSP As label:
@@ -1057,9 +1485,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task C"
+                        ).SP
                     Width: =46
-                    X: =188
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =306
                     ZIndex: =37
 
@@ -1069,9 +1513,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task C"
+                        ).name
                     Width: =92
-                    X: =142
+                    X: |-
+                        =team2TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =328
                     ZIndex: =38
 
@@ -1079,8 +1539,20 @@
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
                     Width: =92
-                    X: =249
-                    Y: =306
+                    X: |-
+                        =team2TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskDY
                     ZIndex: =39
 
                 T2TkDCounter As label:
@@ -1090,11 +1562,25 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task D"
+                        ).counter
                     Width: =46
-                    X: =249
-                    Y: =306
+                    X: |-
+                        =team2TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskDY
                     ZIndex: =40
 
                 T2TkDSP As label:
@@ -1103,10 +1589,26 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task D"
+                        ).SP
                     Width: =46
-                    X: =295
-                    Y: =306
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team2TaskDY
                     ZIndex: =41
 
                 T2TkDDescription As label:
@@ -1115,9 +1617,25 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 2),
+                            name = "Task D"
+                        ).name
                     Width: =92
-                    X: =249
+                    X: |-
+                        =team2TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 2
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
                     Y: =328
                     ZIndex: =42
 
@@ -1133,8 +1651,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =142
-                    Y: =373
+                    X: |-
+                        =team3TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskAY
                     ZIndex: =43
 
                 T3TkACounter As label:
@@ -1144,12 +1674,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task A"
+                        ).counter
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =142
-                    Y: =373
+                    X: |-
+                        =team3TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskAY
                     ZIndex: =44
 
                 T3TkASP As label:
@@ -1158,11 +1702,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task A"
+                        ).SP
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =188
-                    Y: =373
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskAY
                     ZIndex: =45
 
                 T3TkADescription As label:
@@ -1171,11 +1731,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task A"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task A"
+                        ).name
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =142
-                    Y: =395
+                    X: |-
+                        =team3TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskAY + 22
                     ZIndex: =46
 
                 T3TkBArea As rectangle:
@@ -1183,8 +1759,8 @@
                     Height: =56
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =249
-                    Y: =373
+                    X: =team3TaskBX
+                    Y: =team3TaskBY
                     ZIndex: =47
 
                 T3TkBCounter As label:
@@ -1194,12 +1770,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task B"
+                        ).counter
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =249
-                    Y: =373
+                    X: |-
+                        =team3TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskBY
                     ZIndex: =48
 
                 T3TkBSP As label:
@@ -1208,11 +1798,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="3"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task B"
+                        ).SP
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =295
-                    Y: =373
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskBY
                     ZIndex: =49
 
                 T3TkBDescription As label:
@@ -1221,11 +1827,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task B"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task B"
+                        ).name
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =249
-                    Y: =395
+                    X: |-
+                        =team3TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskBY + 22
                     ZIndex: =50
 
                 T3TkCArea As rectangle:
@@ -1233,8 +1855,8 @@
                     Height: =56
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =142
-                    Y: =434
+                    X: =team3TaskCX
+                    Y: =team3TaskCY
                     ZIndex: =51
 
                 T3TkCCounter As label:
@@ -1244,12 +1866,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task C"
+                        ).counter
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =142
-                    Y: =434
+                    X: |-
+                        =team3TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskCY
                     ZIndex: =52
 
                 T3TkCSP As label:
@@ -1258,11 +1894,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task C"
+                        ).SP
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =188
-                    Y: =434
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskCY
                     ZIndex: =53
 
                 T3TkCDescription As label:
@@ -1271,11 +1923,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task C"
+                        ).name
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =142
-                    Y: =456
+                    X: |-
+                        =team3TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskCY + 22
                     ZIndex: =54
 
                 T3TkDArea As rectangle:
@@ -1283,8 +1951,8 @@
                     Height: =56
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =249
-                    Y: =434
+                    X: =team3TaskDX
+                    Y: =team3TaskDY
                     ZIndex: =55
 
                 T3TkDCounter As label:
@@ -1294,12 +1962,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task D"
+                        ).counter
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =249
-                    Y: =434
+                    X: |-
+                        =team3TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskDY
                     ZIndex: =56
 
                 T3TkDSP As label:
@@ -1308,11 +1990,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task D"
+                        ).SP
                     Visible: =totalPlayers >= 3
                     Width: =46
-                    X: =295
-                    Y: =434
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskDY
                     ZIndex: =57
 
                 T3TkDDescription As label:
@@ -1321,11 +2019,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 3),
+                            name = "Task D"
+                        ).name
                     Visible: =totalPlayers >= 3
                     Width: =92
-                    X: =249
-                    Y: =456
+                    X: |-
+                        =team3TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 3
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team3TaskDY + 22
                     ZIndex: =58
 
             TasksT4Group As group:
@@ -1340,8 +2054,8 @@
                     Height: =56
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =142
-                    Y: =507
+                    X: =team4TaskAX
+                    Y: =team4TaskAY
                     ZIndex: =59
 
                 T4TkACounter As label:
@@ -1351,12 +2065,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task A"
+                        ).counter
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =142
-                    Y: =507
+                    X: |-
+                        =team4TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskAY
                     ZIndex: =60
 
                 T4TkASP As label:
@@ -1365,11 +2093,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task A"
+                        ).SP
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =188
-                    Y: =507
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskAY
                     ZIndex: =61
 
                 T4TkADescription As label:
@@ -1378,11 +2122,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task A"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task A"
+                        ).name
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =142
-                    Y: =529
+                    X: |-
+                        =team4TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskAY + 22
                     ZIndex: =62
 
                 T4TkBArea As rectangle:
@@ -1390,8 +2150,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =249
-                    Y: =507
+                    X: |-
+                        =team4TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskBY
                     ZIndex: =63
 
                 T4TkBCounter As label:
@@ -1401,12 +2173,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task B"
+                        ).counter
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =249
-                    Y: =507
+                    X: |-
+                        =team4TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskBY
                     ZIndex: =64
 
                 T4TkBSP As label:
@@ -1415,11 +2201,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="3"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task B"
+                        ).SP
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =295
-                    Y: =507
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskBY
                     ZIndex: =65
 
                 T4TkBDescription As label:
@@ -1428,11 +2230,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task B"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task B"
+                        ).name
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =249
-                    Y: =529
+                    X: |-
+                        =team4TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskBY + 22
                     ZIndex: =66
 
                 T4TkCArea As rectangle:
@@ -1440,8 +2258,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =142
-                    Y: =568
+                    X: |-
+                        =team4TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskCY
                     ZIndex: =67
 
                 T4TkCCounter As label:
@@ -1451,12 +2281,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task C"
+                        ).counter
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =142
-                    Y: =568
+                    X: |-
+                        =team4TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskCY
                     ZIndex: =68
 
                 T4TkCSP As label:
@@ -1465,11 +2309,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task C"
+                        ).SP
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =188
-                    Y: =568
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskCY
                     ZIndex: =69
 
                 T4TkCDescription As label:
@@ -1478,11 +2338,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task C"
+                        ).name
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =142
-                    Y: =590
+                    X: |-
+                        =team4TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskCY + 22
                     ZIndex: =70
 
                 T4TkDArea As rectangle:
@@ -1490,8 +2366,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =249
-                    Y: =568
+                    X: |-
+                        =team4TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskDY
                     ZIndex: =71
 
                 T4TkDCounter As label:
@@ -1501,12 +2389,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task D"
+                        ).counter
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =249
-                    Y: =568
+                    X: |-
+                        =team4TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskDY
                     ZIndex: =72
 
                 T4TkDSP As label:
@@ -1515,11 +2417,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task D"
+                        ).SP
                     Visible: =totalPlayers >= 4
                     Width: =46
-                    X: =295
-                    Y: =568
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskDY
                     ZIndex: =73
 
                 T4TkDDescription As label:
@@ -1528,11 +2446,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 4),
+                            name = "Task D"
+                        ).name
                     Visible: =totalPlayers >= 4
                     Width: =92
-                    X: =249
-                    Y: =590
+                    X: |-
+                        =team4TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 4
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team4TaskDY + 22
                     ZIndex: =74
 
             TasksT5Group As group:
@@ -1547,8 +2481,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =142
-                    Y: =642
+                    X: |-
+                        =team5TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskAY
                     ZIndex: =75
 
                 T5TkACounter As label:
@@ -1558,12 +2504,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task A"
+                        ).counter
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =142
-                    Y: =642
+                    X: |-
+                        =team5TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskAY
                     ZIndex: =76
 
                 T5TkASP As label:
@@ -1572,11 +2532,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task A"
+                        ).SP
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =188
-                    Y: =642
+                    X: |
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskAY
                     ZIndex: =77
 
                 T5TkADescription As label:
@@ -1585,11 +2561,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task A"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task A"
+                        ).name
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =142
-                    Y: =664
+                    X: |-
+                        =team5TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskAY + 22
                     ZIndex: =78
 
                 T5TkBArea As rectangle:
@@ -1597,8 +2589,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =249
-                    Y: =642
+                    X: |-
+                        =team5TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskBY
                     ZIndex: =79
 
                 T5TkBCounter As label:
@@ -1608,12 +2612,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task B"
+                        ).counter
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =249
-                    Y: =642
+                    X: |-
+                        =team5TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskBY
                     ZIndex: =80
 
                 T5TkBSP As label:
@@ -1622,11 +2640,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="3"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task B"
+                        ).SP
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =295
-                    Y: =642
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskBY
                     ZIndex: =81
 
                 T5TkBDescription As label:
@@ -1635,11 +2669,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task B"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task B"
+                        ).name
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =249
-                    Y: =664
+                    X: |-
+                        =team5TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskBY + 22
                     ZIndex: =82
 
                 T5TkCArea As rectangle:
@@ -1647,8 +2697,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =142
-                    Y: =703
+                    X: |-
+                        =team5TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskCY
                     ZIndex: =83
 
                 T5TkCCounter As label:
@@ -1658,12 +2720,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task C"
+                        ).counter
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =142
-                    Y: =703
+                    X: |-
+                        =team5TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskCY
                     ZIndex: =84
 
                 T5TkCSP As label:
@@ -1672,11 +2748,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task C"
+                        ).SP
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =188
-                    Y: =703
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskCY
                     ZIndex: =85
 
                 T5TkCDescription As label:
@@ -1685,11 +2777,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task C"
+                        ).name
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =142
-                    Y: =725
+                    X: |-
+                        =team5TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskCY + 22
                     ZIndex: =86
 
                 T5TkDArea As rectangle:
@@ -1697,8 +2805,20 @@
                     Height: =56
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =249
-                    Y: =703
+                    X: |-
+                        =team5TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskDY
                     ZIndex: =87
 
                 T5TkDCounter As label:
@@ -1708,12 +2828,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task D"
+                        ).counter
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =249
-                    Y: =703
+                    X: |-
+                        =team5TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskDY
                     ZIndex: =88
 
                 T5TkDSP As label:
@@ -1722,11 +2856,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task D"
+                        ).SP
                     Visible: =totalPlayers >= 5
                     Width: =46
-                    X: =295
-                    Y: =703
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskDY
                     ZIndex: =89
 
                 T5TkDDescription As label:
@@ -1735,11 +2885,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =34
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 5),
+                            name = "Task D"
+                        ).name
                     Visible: =totalPlayers >= 5
                     Width: =92
-                    X: =249
-                    Y: =725
+                    X: |-
+                        =team5TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 5
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team5TaskDY + 22
                     ZIndex: =90
 
             Team1Name As label:
@@ -1763,8 +2929,20 @@
                     Height: =52
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =142
-                    Y: =779
+                    X: |-
+                        =team6TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskAY
                     ZIndex: =91
 
                 T6TkACounter As label:
@@ -1774,12 +2952,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task A"
+                        ).counter
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =142
-                    Y: =779
+                    X: |-
+                        =team6TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskAY
                     ZIndex: =92
 
                 T6TkASP As label:
@@ -1788,11 +2980,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task A"
+                        ).SP
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =188
-                    Y: =779
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskAY
                     ZIndex: =93
 
                 T6TkADescription As label:
@@ -1801,11 +3009,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =30
-                    Text: ="Task A"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task A"
+                        ).name
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =142
-                    Y: =801
+                    X: |-
+                        =team6TaskAX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskAY + 22
                     ZIndex: =94
 
                 T6TkBArea As rectangle:
@@ -1813,8 +3037,20 @@
                     Height: =52
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =249
-                    Y: =779
+                    X: |-
+                        =team6TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskBY
                     ZIndex: =95
 
                 T6TkBCounter As label:
@@ -1824,12 +3060,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task B"
+                        ).counter
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =249
-                    Y: =779
+                    X: |-
+                        =team6TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskBY
                     ZIndex: =96
 
                 T6TkBSP As label:
@@ -1838,11 +3088,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="3"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task B"
+                        ).SP
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =295
-                    Y: =779
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskBY
                     ZIndex: =97
 
                 T6TkBDescription As label:
@@ -1851,11 +3117,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =30
-                    Text: ="Task B"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task B"
+                        ).name
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =249
-                    Y: =801
+                    X: |-
+                        =team6TaskBX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskBY + 22
                     ZIndex: =98
 
                 T6TkCArea As rectangle:
@@ -1863,8 +3145,20 @@
                     Height: =52
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =142
-                    Y: =835
+                    X: |-
+                        =team6TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskCY
                     ZIndex: =99
 
                 T6TkCCounter As label:
@@ -1874,12 +3168,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task C"
+                        ).counter
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =142
-                    Y: =835
+                    X: |-
+                        =team6TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskCY
                     ZIndex: =100
 
                 T6TkCSP As label:
@@ -1888,11 +3196,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task C"
+                        ).SP
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =188
-                    Y: =835
+                    X: |-
+                        =188 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskCY
                     ZIndex: =101
 
                 T6TkCDescription As label:
@@ -1901,11 +3225,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =30
-                    Text: ="Task C"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task C"
+                        ).name
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =142
-                    Y: =857
+                    X: |-
+                        =team6TaskCX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskCY + 22
                     ZIndex: =102
 
                 T6TkDArea As rectangle:
@@ -1913,8 +3253,20 @@
                     Height: =52
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =249
-                    Y: =835
+                    X: |-
+                        =team6TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskDY
                     ZIndex: =103
 
                 T6TkDCounter As label:
@@ -1924,12 +3276,26 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
-                        ="0
-                        "
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task D"
+                        ).counter
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =249
-                    Y: =835
+                    X: |-
+                        =team6TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskDY
                     ZIndex: =104
 
                 T6TkDSP As label:
@@ -1938,11 +3304,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
-                    Text: ="5"
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task D"
+                        ).SP
                     Visible: =totalPlayers >= 6
                     Width: =46
-                    X: =295
-                    Y: =835
+                    X: |-
+                        =295 +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskDY
                     ZIndex: =105
 
                 T6TkDDescription As label:
@@ -1951,11 +3333,27 @@
                     Color: =RGBA(255, 255, 255, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =30
-                    Text: ="Task D "
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 6),
+                            name = "Task D"
+                        ).name
                     Visible: =totalPlayers >= 6
                     Width: =92
-                    X: =249
-                    Y: =857
+                    X: |-
+                        =team6TaskDX +
+                        If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = 6
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219,
+                            0
+                        )
+                    Y: =team6TaskDY + 22
                     ZIndex: =106
 
             Team2Name As label:
@@ -2086,7 +3484,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =241
-            Text: =popUpMessage
+            Text: ="Please move the tasks to be developed in this Sprint during your turn"
             Visible: =popUpEnable
             Width: =469
             X: =448
@@ -2111,6 +3509,10 @@
 
     Button1 As button:
         Fill: =RGBA(141, 198, 63, 1)
+        OnSelect: |-
+            =UpdateContext({
+                popUpPlanningEnable: false
+            })
         Text: ="Continue"
         Visible: =popUpPlanningEnable
         X: =603
@@ -2173,7 +3575,7 @@
             Items: |-
                 =Filter(
                     Tasks,
-                    team = currentTurn
+                    team = currentTurn && stage = TaskStageType.BACKLOG
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
@@ -2238,7 +3640,24 @@
                 Color: =RGBA(141, 198, 63, 1)
                 Height: =69
                 Icon: =Icon.CheckBadge
-                OnSelect: =
+                OnSelect: |-
+                    =Update(
+                        Tasks,
+                        {
+                            team: ThisItem.team,
+                            name: ThisItem.name,
+                            SP: ThisItem.SP,
+                            counter: ThisItem.counter,
+                            stage: ThisItem.stage
+                        },
+                        {
+                            team: ThisItem.team,
+                            name: ThisItem.name,
+                            SP: ThisItem.SP,
+                            counter: ThisItem.counter,
+                            stage: TaskStageType.TODO
+                        }
+                    );
                 PaddingBottom: =16
                 PaddingLeft: =16
                 PaddingRight: =16
@@ -2265,13 +3684,22 @@
                 Y: =8
                 ZIndex: =6
 
+            Label4 As label:
+                Height: =45
+                OnSelect: =Select(Parent)
+                Text: =If(ThisItem.IsSelected, "Selected")
+                Width: =91
+                X: =227
+                Y: =44
+                ZIndex: =7
+
         player As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Text: |-
                 =Concatenate(
-                    "Turn of: ",
+                    "Select your Tasks for this Sprint ",
                     LookUp(
                         GamePlayers,
                         id = currentTurn

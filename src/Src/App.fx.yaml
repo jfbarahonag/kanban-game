@@ -17,6 +17,17 @@ App As appinfo:
                 RETROSPECTIVE: 5
             }
         );
+        
+        Set(
+            TaskStageType,
+            {
+                BACKLOG: 1, 
+                TODO: 2,
+                IN_PROCESS: 3,
+                REVIEW: 4,
+                COMPLETED: 5
+            }
+        );
         // End Types
     Theme: =PowerAppsTheme
 

@@ -111,25 +111,29 @@ PlayersView As screen:
                         team: CountRows(Players),
                         SP: 5,
                         counter: 0,
-                        name: "Task A"
+                        name: "Task A",
+                        stage: TaskStageType.BACKLOG
                     },
                     {
                         team: CountRows(Players),
                         SP: 5,
                         counter: 0,
-                        name: "Task B"
+                        name: "Task B",
+                        stage: TaskStageType.BACKLOG
                     },
                     {
                         team: CountRows(Players),
                         SP: 5,
                         counter: 0,
-                        name: "Task C"
+                        name: "Task C",
+                        stage: TaskStageType.BACKLOG
                     },
                     {
                         team: CountRows(Players),
                         SP: 5,
                         counter: 0,
-                        name: "Task D"
+                        name: "Task D",
+                        stage: TaskStageType.BACKLOG
                     }
                 );
                 
