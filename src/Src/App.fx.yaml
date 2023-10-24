@@ -21,11 +21,11 @@ App As appinfo:
         Set(
             TaskStageType,
             {
-                BACKLOG: 1, 
-                TODO: 2,
-                IN_PROCESS: 3,
-                REVIEW: 4,
-                COMPLETED: 5
+                BACKLOG: 0, 
+                TODO: 1,
+                IN_PROCESS: 2,
+                REVIEW: 3,
+                COMPLETED: 4
             }
         );
         // End Types
