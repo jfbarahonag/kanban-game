@@ -3475,7 +3475,7 @@
                 Y: =774
                 ZIndex: =112
 
-            "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "TeamsTasksGroup As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 DelayItemLoading: =true
                 Height: =573
                 Items: =Players

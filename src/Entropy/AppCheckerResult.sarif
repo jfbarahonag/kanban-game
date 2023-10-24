@@ -734,19 +734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.Canvas2.KANBANBOARD.Gallery2"
+                "type": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup"
               }
             }
           ],
@@ -764,19 +764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.Gallery2.TabIndex"
+                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.Gallery2.TabIndex",
+                  "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.Canvas2.KANBANBOARD.Gallery2"
+                "type": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup"
               }
             }
           ],
