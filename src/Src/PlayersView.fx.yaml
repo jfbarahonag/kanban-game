@@ -162,6 +162,7 @@ PlayersView As screen:
         ZIndex: =5
 
     Button4 As button:
+        Height: =63
         OnSelect: |-
             =// Set the game players
             ClearCollect(
@@ -182,8 +183,10 @@ PlayersView As screen:
                     turnStatus: GameStatusType.NOT_STARTED
                 }
             )
-        Text: ="Start Playing"
+        Text: |-
+            ="Go To Board Game
+            "
         X: =1140
-        Y: =680
+        Y: =657
         ZIndex: =6
 
