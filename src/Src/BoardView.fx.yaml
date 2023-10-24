@@ -883,6 +883,7 @@
                     Align: =Align.Center
                     BorderThickness: =1
                     Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(136, 160, 209, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
@@ -1118,6 +1119,7 @@
                     Align: =Align.Center
                     BorderThickness: =1
                     Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(136, 160, 209, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
@@ -1353,6 +1355,7 @@
                     Align: =Align.Center
                     BorderThickness: =1
                     Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(136, 160, 209, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
@@ -1588,6 +1591,7 @@
                     Align: =Align.Center
                     BorderThickness: =1
                     Color: =RGBA(255, 255, 255, 1)
+                    Fill: =RGBA(136, 160, 209, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: |-
