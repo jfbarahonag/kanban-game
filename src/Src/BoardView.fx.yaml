@@ -16,6 +16,13 @@
             }
         );
         
+        // popupDaily
+        UpdateContext(
+            {
+                popUpDailyEnable: false
+            }
+        );
+        
         // token
         UpdateContext(
             {
@@ -572,9 +579,7 @@
                             // IS DAILY
                             Index(Rounds, currentRound).type = RoundType.DAILY,
                             UpdateContext({
-                                popUpEnable: true,
-                                popUpTitle: Index(Rounds, currentRound).name,
-                                popUpMessage: "Please select the task to be developed during this Sprint"
+                                popUpDailyEnable: true
                             })
                         );
                     )
@@ -596,18 +601,28 @@
                         DisplayMode.Disabled
                     )
                 Fill: =RGBA(18, 166, 166, 1)
-                OnSelect: |-
+                OnSelect: |+
                     =// Update status
                     UpdateContext({
                         turnStatus: GameStatusType.STARTED
                     });
                     
+                    // Validate planning case
                     If(
                         Index(Rounds, currentRound).type = RoundType.PLANNING,
                         UpdateContext({
                             popUpPlanningEnable:true
                         })
                     );
+                    
+                    // Validate daily case
+                    If(
+                        Index(Rounds, currentRound).type = RoundType.DAILY,
+                        UpdateContext({
+                            popUpDailyEnable:true
+                        })
+                    );
+                    
                 Text: ="Start Turn"
                 X: =295
                 Y: =311
@@ -3517,7 +3532,23 @@
         Visible: =popUpPlanningEnable
         X: =603
         Y: =617
+        ZIndex: =16
+
+    PopUpAllArea_2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.43)
+        Height: =680
+        Visible: =popUpDailyEnable
+        Width: =1366
+        Y: =88
         ZIndex: =17
+
+    PopUpContentArea_2 As rectangle:
+        Height: =570
+        Visible: =popUpDailyEnable
+        Width: =469
+        X: =448
+        Y: =107
+        ZIndex: =18
 
     PopUpPlanningGroup As group:
         Height: =5
@@ -3567,7 +3598,7 @@
             Width: =50
             X: =855
             Y: =107
-            ZIndex: =14
+            ZIndex: =13
 
         "PlanningTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
@@ -3585,7 +3616,7 @@
             Width: =380
             X: =492
             Y: =182
-            ZIndex: =15
+            ZIndex: =14
 
             Rectangle8 As rectangle:
                 Fill: =RGBA(255, 255, 255, 1)
@@ -3709,5 +3740,103 @@
             Width: =237
             X: =560
             Y: =128
-            ZIndex: =16
+            ZIndex: =15
+
+    PopUpCloseIcon_2 As icon.Cancel:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({
+                popUpDailyEnable: false
+            })
+        Visible: =popUpDailyEnable
+        Width: =50
+        X: =855
+        Y: =107
+        ZIndex: =20
+
+    DailyTitle As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            =Concatenate(
+                "Select your Tasks for this Sprint "
+            )
+        Visible: =popUpDailyEnable
+        Width: =237
+        X: =560
+        Y: =128
+        ZIndex: =22
+
+    DailyPopUpVDivider As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =475
+        Visible: =popUpDailyEnable
+        Width: =2
+        X: =682
+        Y: =182
+        ZIndex: =23
+
+    DailyToDoTasks As label:
+        Align: =Align.Center
+        Text: ="ToDo Tasks"
+        X: =492
+        Y: =182
+        ZIndex: =24
+
+    DailyInProcessTasks As label:
+        Text: ="In Process Tasks"
+        X: =722
+        Y: =182
+        ZIndex: =25
+
+    "DailyToDoTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =435
+        Items: =GamePlayers
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =210
+        X: =462
+        Y: =222
+        ZIndex: =26
+
+        DailyToDoTaskName As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =105
+            X: =52
+            Y: =10
+            ZIndex: =2
+
+        Separator2 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Dropdown3 As dropdown:
+            Height: =28
+            Items: |-
+                =Filter(
+                    Tasks,team = ThisItem.id && stage = TaskStageType.TODO
+                )
+            OnSelect: =Select(Parent)
+            Width: =167
+            X: =21
+            Y: =46
+            ZIndex: =6
 
