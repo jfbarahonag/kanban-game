@@ -688,6 +688,7 @@
                         If(totalPlayers >= 4, 140, 0) +
                         If(totalPlayers >= 5, 140, 0) +
                         If(totalPlayers >= 6, 140, 0)
+                    Visible: =false
                     Width: =220
                     X: =131
                     Y: =16
@@ -704,6 +705,7 @@
                         If(totalPlayers >= 4, 140, 0) +
                         If(totalPlayers >= 5, 140, 0) +
                         If(totalPlayers >= 6, 140, 0)
+                    Visible: =false
                     Width: =220
                     X: =352
                     Y: =16
@@ -720,6 +722,7 @@
                         If(totalPlayers >= 4, 140, 0) +
                         If(totalPlayers >= 5, 140, 0) +
                         If(totalPlayers >= 6, 140, 0)
+                    Visible: =false
                     Width: =220
                     X: =572
                     Y: =16
@@ -736,6 +739,7 @@
                         If(totalPlayers >= 4, 140, 0) +
                         If(totalPlayers >= 5, 140, 0) +
                         If(totalPlayers >= 6, 140, 0)
+                    Visible: =false
                     Width: =220
                     X: =792
                     Y: =16
@@ -752,6 +756,7 @@
                         If(totalPlayers >= 4, 140, 0) +
                         If(totalPlayers >= 5, 140, 0) +
                         If(totalPlayers >= 6, 140, 0)
+                    Visible: =false
                     Width: =220
                     X: =1012
                     Y: =16
@@ -821,6 +826,7 @@
 
                 T1TkAArea As rectangle:
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskAX +
@@ -849,6 +855,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task A"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team1TaskAX +
@@ -877,6 +884,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task A"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -905,6 +913,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task A"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskAX +
@@ -924,6 +933,7 @@
 
                 T1TkBArea As rectangle:
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskBX +
@@ -952,6 +962,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task B"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team1TaskBX +
@@ -980,6 +991,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task B"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -1008,6 +1020,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task B"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =249 +
@@ -1027,6 +1040,7 @@
 
                 T1TkCArea As rectangle:
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskCX +
@@ -1055,6 +1069,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task C"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team1TaskCX +
@@ -1083,6 +1098,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task C"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -1111,6 +1127,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task C"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskCX +
@@ -1130,6 +1147,7 @@
 
                 T1TkDArea As rectangle:
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team1TaskDX +
@@ -1158,6 +1176,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task D"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team1TaskDX +
@@ -1186,6 +1205,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task D"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -1214,6 +1234,7 @@
                             Filter(Tasks, team = 1),
                             name = "Task D"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =249 +
@@ -1241,6 +1262,7 @@
                 T2TkAArea As rectangle:
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskAX +
@@ -1269,6 +1291,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task A"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team2TaskAX +
@@ -1297,6 +1320,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task A"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -1325,6 +1349,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task A"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskAX +
@@ -1345,6 +1370,7 @@
                 T2TkBArea As rectangle:
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskBX +
@@ -1373,6 +1399,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task B"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team2TaskBX +
@@ -1401,6 +1428,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task B"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -1429,6 +1457,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task B"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskBX +
@@ -1449,6 +1478,7 @@
                 T2TkCArea As rectangle:
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskCX +
@@ -1477,6 +1507,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task C"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team2TaskCX +
@@ -1505,6 +1536,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task C"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -1533,6 +1565,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task C"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskCX +
@@ -1553,6 +1586,7 @@
                 T2TkDArea As rectangle:
                     Fill: =RGBA(109, 49, 162, 1)
                     Height: =56
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskDX +
@@ -1581,6 +1615,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task D"
                         ).counter
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team2TaskDX +
@@ -1609,6 +1644,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task D"
                         ).SP
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -1637,6 +1673,7 @@
                             Filter(Tasks, team = 2),
                             name = "Task D"
                         ).name
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team2TaskDX +
@@ -1664,7 +1701,7 @@
                 T3TkAArea As rectangle:
                     Fill: =RGBA(54, 176, 75, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team3TaskAX +
@@ -1693,7 +1730,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task A"
                         ).counter
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team3TaskAX +
@@ -1722,7 +1759,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task A"
                         ).SP
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -1751,7 +1788,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task A"
                         ).name
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team3TaskAX +
@@ -1772,7 +1809,7 @@
                 T3TkBArea As rectangle:
                     Fill: =RGBA(54, 176, 75, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: =team3TaskBX
                     Y: =team3TaskBY
@@ -1789,7 +1826,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task B"
                         ).counter
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team3TaskBX +
@@ -1818,7 +1855,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task B"
                         ).SP
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -1847,7 +1884,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task B"
                         ).name
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team3TaskBX +
@@ -1868,7 +1905,7 @@
                 T3TkCArea As rectangle:
                     Fill: =RGBA(54, 176, 75, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: =team3TaskCX
                     Y: =team3TaskCY
@@ -1885,7 +1922,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task C"
                         ).counter
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team3TaskCX +
@@ -1914,7 +1951,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task C"
                         ).SP
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -1943,7 +1980,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task C"
                         ).name
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team3TaskCX +
@@ -1964,7 +2001,7 @@
                 T3TkDArea As rectangle:
                     Fill: =RGBA(54, 176, 75, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: =team3TaskDX
                     Y: =team3TaskDY
@@ -1981,7 +2018,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task D"
                         ).counter
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team3TaskDX +
@@ -2010,7 +2047,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task D"
                         ).SP
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -2039,7 +2076,7 @@
                             Filter(Tasks, team = 3),
                             name = "Task D"
                         ).name
-                    Visible: =totalPlayers >= 3
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team3TaskDX +
@@ -2067,7 +2104,7 @@
                 T4TkAArea As rectangle:
                     Fill: =RGBA(184, 0, 0, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: =team4TaskAX
                     Y: =team4TaskAY
@@ -2084,7 +2121,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task A"
                         ).counter
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team4TaskAX +
@@ -2113,7 +2150,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task A"
                         ).SP
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -2142,7 +2179,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task A"
                         ).name
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskAX +
@@ -2163,7 +2200,7 @@
                 T4TkBArea As rectangle:
                     Fill: =RGBA(184, 0, 0, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskBX +
@@ -2192,7 +2229,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task B"
                         ).counter
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team4TaskBX +
@@ -2221,7 +2258,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task B"
                         ).SP
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -2250,7 +2287,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task B"
                         ).name
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskBX +
@@ -2271,7 +2308,7 @@
                 T4TkCArea As rectangle:
                     Fill: =RGBA(184, 0, 0, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskCX +
@@ -2300,7 +2337,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task C"
                         ).counter
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team4TaskCX +
@@ -2329,7 +2366,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task C"
                         ).SP
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -2358,7 +2395,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task C"
                         ).name
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskCX +
@@ -2379,7 +2416,7 @@
                 T4TkDArea As rectangle:
                     Fill: =RGBA(184, 0, 0, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskDX +
@@ -2408,7 +2445,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task D"
                         ).counter
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team4TaskDX +
@@ -2437,7 +2474,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task D"
                         ).SP
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -2466,7 +2503,7 @@
                             Filter(Tasks, team = 4),
                             name = "Task D"
                         ).name
-                    Visible: =totalPlayers >= 4
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team4TaskDX +
@@ -2494,7 +2531,7 @@
                 T5TkAArea As rectangle:
                     Fill: =RGBA(116, 116, 116, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskAX +
@@ -2523,7 +2560,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task A"
                         ).counter
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team5TaskAX +
@@ -2552,7 +2589,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task A"
                         ).SP
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |
                         =188 +
@@ -2581,7 +2618,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task A"
                         ).name
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskAX +
@@ -2602,7 +2639,7 @@
                 T5TkBArea As rectangle:
                     Fill: =RGBA(116, 116, 116, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskBX +
@@ -2631,7 +2668,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task B"
                         ).counter
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team5TaskBX +
@@ -2660,7 +2697,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task B"
                         ).SP
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -2689,7 +2726,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task B"
                         ).name
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskBX +
@@ -2710,7 +2747,7 @@
                 T5TkCArea As rectangle:
                     Fill: =RGBA(116, 116, 116, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskCX +
@@ -2739,7 +2776,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task C"
                         ).counter
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team5TaskCX +
@@ -2768,7 +2805,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task C"
                         ).SP
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -2797,7 +2834,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task C"
                         ).name
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskCX +
@@ -2818,7 +2855,7 @@
                 T5TkDArea As rectangle:
                     Fill: =RGBA(116, 116, 116, 1)
                     Height: =56
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskDX +
@@ -2847,7 +2884,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task D"
                         ).counter
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team5TaskDX +
@@ -2876,7 +2913,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task D"
                         ).SP
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -2905,7 +2942,7 @@
                             Filter(Tasks, team = 5),
                             name = "Task D"
                         ).name
-                    Visible: =totalPlayers >= 5
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team5TaskDX +
@@ -2942,7 +2979,7 @@
                 T6TkAArea As rectangle:
                     Fill: =RGBA(221, 79, 14, 1)
                     Height: =52
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskAX +
@@ -2971,7 +3008,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task A"
                         ).counter
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team6TaskAX +
@@ -3000,7 +3037,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task A"
                         ).SP
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -3029,7 +3066,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task A"
                         ).name
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskAX +
@@ -3050,7 +3087,7 @@
                 T6TkBArea As rectangle:
                     Fill: =RGBA(221, 79, 14, 1)
                     Height: =52
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskBX +
@@ -3079,7 +3116,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task B"
                         ).counter
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team6TaskBX +
@@ -3108,7 +3145,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task B"
                         ).SP
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -3137,7 +3174,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task B"
                         ).name
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskBX +
@@ -3158,7 +3195,7 @@
                 T6TkCArea As rectangle:
                     Fill: =RGBA(221, 79, 14, 1)
                     Height: =52
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskCX +
@@ -3187,7 +3224,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task C"
                         ).counter
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team6TaskCX +
@@ -3216,7 +3253,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task C"
                         ).SP
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =188 +
@@ -3245,7 +3282,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task C"
                         ).name
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskCX +
@@ -3266,7 +3303,7 @@
                 T6TkDArea As rectangle:
                     Fill: =RGBA(221, 79, 14, 1)
                     Height: =52
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskDX +
@@ -3295,7 +3332,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task D"
                         ).counter
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =team6TaskDX +
@@ -3324,7 +3361,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task D"
                         ).SP
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =46
                     X: |-
                         =295 +
@@ -3353,7 +3390,7 @@
                             Filter(Tasks, team = 6),
                             name = "Task D"
                         ).name
-                    Visible: =totalPlayers >= 6
+                    Visible: =false
                     Width: =92
                     X: |-
                         =team6TaskDX +
@@ -3433,11 +3470,259 @@
                         Index(GamePlayers, 6).name,
                         ""
                     )
-                Visible: =totalPlayers >= 6
+                Visible: =false
                 Width: =117
                 X: =6
                 Y: =774
                 ZIndex: =112
+
+            "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =573
+                Items: =Players
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =142
+                Width: =1101
+                X: =131
+                Y: =101
+                ZIndex: =113
+
+                Separator3 As rectangle:
+                    Fill: =RGBA(0, 18, 107, 1)
+                    Height: =4
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =5
+
+                Rectangle2 As rectangle:
+                    Height: =Parent.TemplateHeight - Separator3.Height
+                    OnSelect: =Select(Parent)
+                    Visible: =ThisItem.IsSelected
+                    Width: =4
+                    ZIndex: =6
+
+                TeamTkAArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =18
+                    Y: =8
+                    ZIndex: =7
+
+                TeamTkACounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task A"
+                        ).counter
+                    Width: =46
+                    X: =18
+                    Y: =8
+                    ZIndex: =8
+
+                TeamTkASP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task A"
+                        ).SP
+                    Width: =46
+                    X: =64
+                    Y: =8
+                    ZIndex: =9
+
+                TeamTkADescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task A"
+                        ).name
+                    Width: =92
+                    X: =18
+                    Y: =30
+                    ZIndex: =10
+
+                TeamTkBArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =119
+                    Y: =8
+                    ZIndex: =11
+
+                TeamTkBCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task B"
+                        ).counter
+                    Width: =46
+                    X: =119
+                    Y: =8
+                    ZIndex: =12
+
+                TeamTkBSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task B"
+                        ).SP
+                    Width: =46
+                    X: =165
+                    Y: =8
+                    ZIndex: =13
+
+                TeamTkBDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task B"
+                        ).name
+                    Width: =92
+                    X: =119
+                    Y: =30
+                    ZIndex: =14
+
+                TeamTkCArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =18
+                    Y: =75
+                    ZIndex: =15
+
+                TeamTkCCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).counter
+                    Width: =46
+                    X: =18
+                    Y: =75
+                    ZIndex: =16
+
+                TeamTkCSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).SP
+                    Width: =46
+                    X: =64
+                    Y: =75
+                    ZIndex: =17
+
+                TeamTkCDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task C"
+                        ).name
+                    Width: =92
+                    X: =18
+                    Y: =97
+                    ZIndex: =18
+
+                TeamTkDArea As rectangle:
+                    Height: =56
+                    Width: =92
+                    X: =119
+                    Y: =75
+                    ZIndex: =19
+
+                TeamTkDCounter As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).counter
+                    Width: =46
+                    X: =119
+                    Y: =75
+                    ZIndex: =20
+
+                TeamTkDSP As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).SP
+                    Width: =46
+                    X: =165
+                    Y: =75
+                    ZIndex: =21
+
+                TeamTkDDescription As label:
+                    Align: =Align.Center
+                    BorderThickness: =1
+                    Color: =RGBA(255, 255, 255, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =34
+                    Text: |-
+                        =LookUp(
+                            Filter(Tasks, team = 1),
+                            name = "Task D"
+                        ).name
+                    Width: =92
+                    X: =119
+                    Y: =97
+                    ZIndex: =22
 
     Header As group:
         Height: =5
