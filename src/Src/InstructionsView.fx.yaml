@@ -1,4 +1,5 @@
 InstructionsView As screen:
     BackgroundImage: =instructions1
+    Fill: =RGBA(255, 255, 255, 1)
     ImagePosition: =ImagePosition.Fill
 
