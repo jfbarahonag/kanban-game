@@ -15,7 +15,7 @@ InstructionsView As screen:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Height: =66
-        Size: =30
+        Size: =35
         Text: |-
             ="Instructions
             "
@@ -23,6 +23,14 @@ InstructionsView As screen:
         X: =99
         Y: =40
         ZIndex: =2
+
+    Star1 As star.star6:
+        Fill: =RGBA(255, 255, 0, 1)
+        Height: =164
+        Width: =164
+        X: =1096
+        Y: =484
+        ZIndex: =3
 
     Label3 As label:
         Align: =Align.Justify
@@ -44,25 +52,8 @@ InstructionsView As screen:
               6.2.      If there are tasks in columns other than COMPLETED, they must be returned to the Backlog column, if it is in the REVIEW column, add 1 (+1) to the story counter.
             7.	When you place the token in the RETROSPECTIVE box, you can add 1 (+1) or subtract 1 (-1) to the story point of any of the tasks in any other player’s Backlog column.
             8.	If a person who requests or delivers FT already has their tasks completed in SPRINT, this action is omitted."
-        Width: =947
+        Width: =1013
         X: =99
         Y: =106
-        ZIndex: =7
-
-    Star1 As star.star6:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =164
-        Width: =164
-        X: =1080
-        Y: =486
-        ZIndex: =8
-
-    Icon2 As icon.BookmarkFilled:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =170
-        Icon: =Icon.BookmarkFilled
-        Width: =127
-        X: =1095
-        Y: =315
-        ZIndex: =9
+        ZIndex: =4
 
