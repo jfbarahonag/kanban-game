@@ -17676,7 +17676,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "T1TkAArea",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17853,7 +17853,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "T1TkACounter",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18692,7 +18692,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "T1TkBArea",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -18869,7 +18869,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "T1TkBCounter",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
