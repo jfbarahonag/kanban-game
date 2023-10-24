@@ -14709,7 +14709,14 @@
         "Height",
         "OnSelect",
         "ZIndex",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ThisItem.IsSelected",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderThickness",
         "TabIndex"
       ],
@@ -46147,7 +46154,14 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -46659,7 +46673,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkADescription",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -47213,7 +47227,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkBArea",
-      "ParentIndex": 12,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -47396,7 +47410,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkBCounter",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -47699,7 +47713,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkBDescription",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48009,7 +48023,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkBSP",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48253,7 +48267,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkCArea",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -48436,7 +48450,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkCCounter",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49049,7 +49063,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TeamTkCSP",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -2965,7 +2965,6 @@
                 Height: =117
                 Text: =Index(GamePlayers, 1).name
                 Width: =117
-                X: =6
                 Y: =114
                 ZIndex: =107
 
@@ -3500,14 +3499,58 @@
                 Rectangle2 As rectangle:
                     Height: =Parent.TemplateHeight - Separator3.Height
                     OnSelect: =Select(Parent)
-                    Visible: =ThisItem.IsSelected
                     Width: =4
                     ZIndex: =6
 
                 TeamTkAArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =7
 
@@ -3519,7 +3562,7 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task A"
                         ).counter
                     Width: =46
@@ -3535,7 +3578,7 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task A"
                         ).SP
                     Width: =46
@@ -3551,7 +3594,7 @@
                     Height: =34
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task A"
                         ).name
                     Width: =92
@@ -3562,7 +3605,7 @@
                 TeamTkBArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =119
+                    X: =115
                     Y: =8
                     ZIndex: =11
 
@@ -3574,11 +3617,11 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                           Filter(Tasks, team = ThisItem.id),
                             name = "Task B"
                         ).counter
                     Width: =46
-                    X: =119
+                    X: =115
                     Y: =8
                     ZIndex: =12
 
@@ -3590,11 +3633,11 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task B"
                         ).SP
                     Width: =46
-                    X: =165
+                    X: =161
                     Y: =8
                     ZIndex: =13
 
@@ -3606,11 +3649,11 @@
                     Height: =34
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task B"
                         ).name
                     Width: =92
-                    X: =119
+                    X: =115
                     Y: =30
                     ZIndex: =14
 
@@ -3618,7 +3661,7 @@
                     Height: =56
                     Width: =92
                     X: =18
-                    Y: =75
+                    Y: =70
                     ZIndex: =15
 
                 TeamTkCCounter As label:
@@ -3629,12 +3672,12 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task C"
                         ).counter
                     Width: =46
                     X: =18
-                    Y: =75
+                    Y: =70
                     ZIndex: =16
 
                 TeamTkCSP As label:
@@ -3645,12 +3688,12 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task C"
                         ).SP
                     Width: =46
                     X: =64
-                    Y: =75
+                    Y: =70
                     ZIndex: =17
 
                 TeamTkCDescription As label:
@@ -3661,19 +3704,19 @@
                     Height: =34
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task C"
                         ).name
                     Width: =92
                     X: =18
-                    Y: =97
+                    Y: =92
                     ZIndex: =18
 
                 TeamTkDArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =119
-                    Y: =75
+                    X: =115
+                    Y: =70
                     ZIndex: =19
 
                 TeamTkDCounter As label:
@@ -3684,12 +3727,12 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task D"
                         ).counter
                     Width: =46
-                    X: =119
-                    Y: =75
+                    X: =115
+                    Y: =70
                     ZIndex: =20
 
                 TeamTkDSP As label:
@@ -3700,12 +3743,12 @@
                     Height: =22
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task D"
                         ).SP
                     Width: =46
-                    X: =165
-                    Y: =75
+                    X: =161
+                    Y: =70
                     ZIndex: =21
 
                 TeamTkDDescription As label:
@@ -3716,12 +3759,12 @@
                     Height: =34
                     Text: |-
                         =LookUp(
-                            Filter(Tasks, team = 1),
+                            Filter(Tasks, team = ThisItem.id),
                             name = "Task D"
                         ).name
                     Width: =92
-                    X: =119
-                    Y: =97
+                    X: =115
+                    Y: =92
                     ZIndex: =22
 
     Header As group:
