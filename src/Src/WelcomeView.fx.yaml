@@ -154,6 +154,7 @@ WelcomeView As screen:
         
 
     StartButton As button:
+        Fill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =Navigate(
                 PlayersView
@@ -165,6 +166,7 @@ WelcomeView As screen:
         ZIndex: =3
 
     InstructionButton As button:
+        Fill: =RGBA(54, 176, 75, 1)
         OnSelect: =Navigate(InstructionsView, ScreenTransition.CoverRight);
         Text: ="INSTRUCTIONS"
         X: =363
