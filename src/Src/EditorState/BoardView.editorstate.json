@@ -46334,7 +46334,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         "Width",
         "Height",
@@ -46630,7 +46637,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -46940,7 +46954,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "64",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -47201,7 +47222,14 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -47374,7 +47402,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         "Width",
         "Height",
@@ -47670,7 +47705,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -47980,7 +48022,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "161",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -48241,7 +48290,14 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -48414,7 +48470,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         "Width",
         "Height",
@@ -48710,7 +48773,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "18",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -49020,7 +49090,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "64",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -49281,7 +49358,14 @@
         "BorderStyle",
         "FocusedBorderColor",
         "DisplayMode",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -49454,7 +49538,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         "Width",
         "Height",
@@ -49750,7 +49841,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "115",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -50060,7 +50158,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "161",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",

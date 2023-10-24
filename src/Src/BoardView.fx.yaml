@@ -3566,7 +3566,52 @@
                             name = "Task A"
                         ).counter
                     Width: =46
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =8
 
@@ -3582,7 +3627,52 @@
                             name = "Task A"
                         ).SP
                     Width: =46
-                    X: =64
+                    X: |-
+                        =64
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =9
 
@@ -3598,14 +3688,104 @@
                             name = "Task A"
                         ).name
                     Width: =92
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task A"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =30
                     ZIndex: =10
 
                 TeamTkBArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =11
 
@@ -3621,7 +3801,52 @@
                             name = "Task B"
                         ).counter
                     Width: =46
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =12
 
@@ -3637,7 +3862,52 @@
                             name = "Task B"
                         ).SP
                     Width: =46
-                    X: =161
+                    X: |-
+                        =161
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =8
                     ZIndex: =13
 
@@ -3653,14 +3923,104 @@
                             name = "Task B"
                         ).name
                     Width: =92
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task B"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =30
                     ZIndex: =14
 
                 TeamTkCArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =15
 
@@ -3676,7 +4036,52 @@
                             name = "Task C"
                         ).counter
                     Width: =46
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =16
 
@@ -3692,7 +4097,52 @@
                             name = "Task C"
                         ).SP
                     Width: =46
-                    X: =64
+                    X: |-
+                        =64
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =17
 
@@ -3708,14 +4158,104 @@
                             name = "Task C"
                         ).name
                     Width: =92
-                    X: =18
+                    X: |-
+                        =18
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task C"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =92
                     ZIndex: =18
 
                 TeamTkDArea As rectangle:
                     Height: =56
                     Width: =92
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =19
 
@@ -3731,7 +4271,52 @@
                             name = "Task D"
                         ).counter
                     Width: =46
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =20
 
@@ -3747,7 +4332,52 @@
                             name = "Task D"
                         ).SP
                     Width: =46
-                    X: =161
+                    X: |-
+                        =161
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =70
                     ZIndex: =21
 
@@ -3763,7 +4393,52 @@
                             name = "Task D"
                         ).name
                     Width: =92
-                    X: =115
+                    X: |-
+                        =115
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.TODO,
+                            219 * TaskStageType.TODO,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.IN_PROCESS,
+                            219 * TaskStageType.IN_PROCESS,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.REVIEW,
+                            219 * TaskStageType.REVIEW,
+                            0
+                        )
+                        + If(
+                            LookUp(
+                                Filter(
+                                    Tasks,
+                                    team = ThisItem.id
+                                ),
+                                name = "Task D"
+                            ).stage = TaskStageType.COMPLETED,
+                            219 * TaskStageType.COMPLETED,
+                            0
+                        )
                     Y: =92
                     ZIndex: =22
 
