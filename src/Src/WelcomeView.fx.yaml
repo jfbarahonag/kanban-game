@@ -161,7 +161,7 @@ WelcomeView As screen:
             )
         Text: ="SELECT PLAYERS"
         Width: =179
-        X: =856
+        X: =826
         Y: =680
         ZIndex: =3
 
