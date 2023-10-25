@@ -1840,32 +1840,15 @@
                     RGBA(127, 178, 57, 1)
                 )
             )
-        Height: =204
+        Height: =181
         OnSelect: |-
-            =Update(
-                Tasks,
-                {
-                    team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
-                    name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
-                    SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
-                    counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
-                    stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
-                },
-                {
-                    team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
-                    name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
-                    SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
-                    counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + 1,
-                    stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
-                }
-            );
-            
-            If(
+            =If(
+                // Task in process
                 PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
                 UpdateContext({
                     currentCard: First(Shuffle(DailyNormalCards))
                 });
-            
+                
                 If(currentCard.type = EventResultType.INCREMENT,
                     Update(
                         Tasks,
@@ -1935,7 +1918,7 @@
         Visible: =popUpDailyEnable
         Width: =176
         X: =593
-        Y: =469
+        Y: =460
         ZIndex: =33
 
     PopUpDailyToDoInProcessGroup As group:
@@ -2125,12 +2108,64 @@
             Y: =617
             ZIndex: =27
 
+    Button3 As button:
+        Fill: =RGBA(141, 198, 63, 1)
+        OnSelect: |
+            =If (
+                // In Review and counter >= SP
+                And(
+                    LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage = TaskStageType.IN_PROCESS,    
+                    LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter >= LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP
+                ),
+                // move to review
+                Update(
+                    Tasks,
+                    {
+                        team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                        name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                        SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                        counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                        stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                    },
+                    {
+                        team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                        name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                        SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                        counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                        stage: TaskStageType.REVIEW
+                    }
+                ),
+                // increment the counter
+                Update(
+                    Tasks,
+                    {
+                        team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                        name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                        SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                        counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                        stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                    },
+                    {
+                        team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                        name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                        SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                        counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + 1,
+                        stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                    }
+                )
+            );
+        Text: ="Confirm"
+        Visible: =popUpDailyEnable
+        X: =593
+        Y: =319
+        ZIndex: =39
+
     PopUpGroup As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =39
+        ZIndex: =45
 
         PopUpAllArea As rectangle:
             Fill: =RGBA(0, 0, 0, 0.43)
@@ -2138,7 +2173,7 @@
             Visible: =popUpEnable
             Width: =1366
             Y: =88
-            ZIndex: =34
+            ZIndex: =40
 
         PopUpContentArea As rectangle:
             Height: =312
@@ -2146,7 +2181,7 @@
             Width: =469
             X: =448
             Y: =272
-            ZIndex: =35
+            ZIndex: =41
 
         PopUpTitleLabel As label:
             Align: =Align.Center
@@ -2159,7 +2194,7 @@
             Width: =469
             X: =448
             Y: =272
-            ZIndex: =36
+            ZIndex: =42
 
         PopUpMessageLabel As label:
             Align: =Align.Center
@@ -2171,7 +2206,7 @@
             Width: =469
             X: =448
             Y: =343
-            ZIndex: =37
+            ZIndex: =43
 
         PopUpCloseIcon As icon.Cancel:
             Color: =RGBA(255, 255, 255, 1)
@@ -2187,7 +2222,7 @@
             Width: =50
             X: =855
             Y: =282
-            ZIndex: =38
+            ZIndex: =44
 
     PopUpDailyGroup As group:
         Height: =5
@@ -2199,6 +2234,7 @@
         PopUpDailyAllArea As rectangle:
             Fill: =RGBA(0, 0, 0, 0.43)
             Height: =680
+            Tooltip: ="hola"
             Visible: =popUpDailyEnable
             Width: =1366
             Y: =88
@@ -2206,6 +2242,7 @@
 
         PopUpDailyContentArea As rectangle:
             Height: =570
+            Tooltip: ="hola"
             Visible: =popUpDailyEnable
             Width: =469
             X: =448
@@ -2220,6 +2257,7 @@
                 =UpdateContext({
                     popUpDailyEnable: false
                 })
+            Tooltip: ="hola"
             Visible: =popUpDailyEnable
             Width: =50
             X: =855
@@ -2232,6 +2270,7 @@
             FontWeight: =FontWeight.Bold
             Height: =54
             Text: =Upper("Select the task to be developed in this daily.")
+            Tooltip: ="hola"
             Visible: =popUpDailyEnable
             Width: =272
             X: =547

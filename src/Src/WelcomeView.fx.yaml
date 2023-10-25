@@ -159,49 +159,49 @@ WelcomeView As screen:
                 {
                     id: 1,
                     content: "THE TEAM TO YOUR RIGHT ASKS YOU FOR 1 WORKFORCE",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 1
                 },
                 {
                     id: 2,
                     content: "THE TEAM TO YOUR LEFT ASKS YOU FOR 1 WORKFORCE",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 1
                 },
                 {
                     id: 3,
                     content: "YOU GIVE 1 WORKFORCE TO THE TEAM YOU CHOOSE",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 1
                 },
                 {
                     id: 4,
                     content: "YOU LOSE 1 WORKFORCE",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 1
                 },
                 {
                     id: 5,
                     content: "YOU ASK FOR 1 WORKFORCE FROM THE TEAM TO YOUR RIGHT",
-                    type: EventResultType.DECREMENT,
+                    type: EventResultType.INCREMENT,
                     counterValue: 1
                 },
                 {
                     id: 6,
                     content: "YOU ASK FOR 1 WORKFORCE FROM THE TEAM TO YOUR LEFT",
-                    type: EventResultType.DECREMENT,
+                    type: EventResultType.INCREMENT,
                     counterValue: 1
                 },
                 {
                     id: 7,
                     content: "YOU ASK FOR 1 WORKFORCE TO THE TEAM YOU CHOOSE",
-                    type: EventResultType.DECREMENT,
+                    type: EventResultType.INCREMENT,
                     counterValue: 1
                 },
                 {
                     id: 8,
                     content: "YOU WIN 1 WORKFORCE",
-                    type: EventResultType.DECREMENT,
+                    type: EventResultType.INCREMENT,
                     counterValue: 1
                 }
             )

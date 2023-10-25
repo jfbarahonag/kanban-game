@@ -190,3 +190,11 @@ PlayersView As screen:
         Y: =657
         ZIndex: =6
 
+    Icon1_1 As icon.BackArrow:
+        Color: =RGBA(56, 96, 178, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.CoverRight)
+        X: =152
+        Y: =44
+        ZIndex: =7
+
