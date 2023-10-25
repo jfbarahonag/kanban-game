@@ -14,6 +14,156 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery.PlayersInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersAddButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersAddButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.AccessibleLabel"
                 }
               ],
@@ -177,6 +327,66 @@
                 "member": "TabIndex",
                 "module": "BoardView",
                 "type": "BoardView.PopUpDailyCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
               }
             }
           ],
@@ -434,6 +644,156 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "BoardView.DailyInProcessTasksGallery.AccessibleLabel"
                 }
               ],
@@ -584,1835 +944,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery.PlayersInput"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersAddButton"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersAddButton"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ScreenHasManyControls",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team1TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team1TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team1TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team2TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team2TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team2TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team3TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team3TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team3TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team4TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team4TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team4TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team5TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team5TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team5TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskAX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskAX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskAX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskAY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskAY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskAY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskBX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskBX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskBX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskBY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskBY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskBY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskCX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskCX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskCX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskCY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskCY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskCY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskDX"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskDX",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskDX",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.team6TaskDY"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.team6TaskDY",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "team6TaskDY",
-                "module": "BoardView",
-                "type": "BoardView"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "TestView.counterTeamsHasTasksInBacklog"
                 }
               ],
@@ -2436,7 +967,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2466,7 +997,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2496,7 +1027,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2526,7 +1057,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2556,7 +1087,1476 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team1TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team1TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team1TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team2TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team2TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team2TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team3TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team3TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team3TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team4TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team4TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team4TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team5TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team5TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team5TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskAX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskAX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskAX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskAY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskAY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskAY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskBX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskBX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskBX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskBY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskBY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskBY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskCX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskCX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskCX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskCY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskCY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskCY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskDX"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskDX",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskDX",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.team6TaskDY"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.team6TaskDY",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "team6TaskDY",
+                "module": "BoardView",
+                "type": "BoardView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
         }
       ],
       "tool": {
@@ -2599,41 +2599,41 @@
               }
             },
             {
-              "id": "app-ScreenHasManyControls",
-              "messageStrings": {
-                "issue": {
-                  "text": "Too many controls on a screen"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Reduce the number of controls on the screen.",
-                  "Break the app into more screens to reduce the per-screen complexity.",
-                  "Use components to unify grouped controls that are identical across screens, reducing duplication.",
-                  "Use galleries to represent a series of repeated similar controls.",
-                  "Break the app into multiple apps so that each app is small and performant."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"BoardView\" is 367, which exceeds the maximum threshold recommended (300)."
-              }
-            },
-            {
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
-                  "text": "Unused variable"
+                  "text": "Variable no utilizada"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Remove the unused variable."
+                  "Quite la variable no utilizada."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+                "whyFix": "Esta variable está declarada, pero ningún control hace referencia a ella, por lo que no es necesaria."
+              }
+            },
+            {
+              "id": "app-ScreenHasManyControls",
+              "messageStrings": {
+                "issue": {
+                  "text": "Demasiados controles en una pantalla"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reduzca el número de controles en la pantalla.",
+                  "Divida la aplicación en más pantallas para reducir la complejidad por pantalla.",
+                  "Use componentes para unificar los controles agrupados que sean idénticos en todas las pantallas y, así, reducir los duplicados.",
+                  "Use galerías para representar una serie de controles similares repetidos.",
+                  "Divida la aplicación en varias aplicaciones para que cada una sea más pequeña y cuente con mejor rendimiento."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Los controles consumen recursos y, si una pantalla tiene demasiados controles, la aplicación puede dejar de responder o ralentizarse. La complejidad estimada de \"BoardView\" es 367, que es superior al umbral máximo recomendado (300)."
               }
             }
           ],
