@@ -2,7 +2,7 @@ TestView As screen:
 
     Button2 As button:
         OnSelect: |-
-            =UpdateContext({
+            =/*UpdateContext({
                 counterTeamsHasTasksInBacklog: CountRows(
                     GroupBy(
                         Filter(Tasks, stage = TaskStageType.BACKLOG),"team","data"
@@ -28,7 +28,10 @@ TestView As screen:
                         Filter(Tasks, stage = TaskStageType.COMPLETED),"team","data"
                     )
                 )
-            })
+            });*/
+            
+            Notify(First(Shuffle(DailyNormalCards)).content
+            ,NotificationType.Error)
         Text: ="Button"
         X: =584
         Y: =340

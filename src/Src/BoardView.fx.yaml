@@ -101,62 +101,6 @@
             }
         );
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Items: =GroupBy(Tasks,"team","name")
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =104
-        Visible: =false
-        X: =560
-        Y: =168
-        ZIndex: =1
-
-        Title1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.team
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
-            ZIndex: =2
-
-        Subtitle1 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =LookUp(ThisItem.name,name = "Task B").name
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height
-            ZIndex: =3
-
-        Separator1 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
-        Rectangle1 As rectangle:
-            Height: =Parent.TemplateHeight - Separator1.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
-
     RestartButton As button:
         OnSelect: =Navigate(WelcomeView,ScreenTransition.Fade);
         Text: ="RESTART"
@@ -1902,24 +1846,14 @@
                 UpdateContext({
                     popUpEnable: true,
                     popUpTitle: "DAILY CARD RESPONSE",
-                    popUpMessage: LookUp(
-                        DailyNormalCards, 
-                        id=RandBetween(
-                            1, CountRows(DailyNormalCards)
-                        )
-                    ).content
+                    popUpMessage: First(Shuffle(DailyNormalCards)).content
                 }),
                 If(
                     PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
                     UpdateContext({
                         popUpEnable: true,
                         popUpTitle: "DAILY REVISION CARD RESPONSE",
-                        popUpMessage: LookUp(
-                        DailyRevisionCards, 
-                        id=RandBetween(
-                            1, CountRows(DailyRevisionCards)
-                        )
-                    ).content
+                        popUpMessage: First(Shuffle(DailyRevisionCards)).content
                     })
                 )
             )
@@ -2125,6 +2059,70 @@
             Y: =617
             ZIndex: =27
 
+    PopUpGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =39
+
+        PopUpAllArea As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.43)
+            Height: =680
+            Visible: =popUpEnable
+            Width: =1366
+            Y: =88
+            ZIndex: =34
+
+        PopUpContentArea As rectangle:
+            Height: =312
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =272
+            ZIndex: =35
+
+        PopUpTitleLabel As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =71
+            Text: =popUpTitle
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =272
+            ZIndex: =36
+
+        PopUpMessageLabel As label:
+            Align: =Align.Center
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =241
+            Text: =popUpMessage
+            Visible: =popUpEnable
+            Width: =469
+            X: =448
+            Y: =343
+            ZIndex: =37
+
+        PopUpCloseIcon As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    popUpEnable: false,
+                    popUpTitle: "",
+                    popUpMessage: ""
+                })
+            Visible: =popUpEnable
+            Width: =50
+            X: =855
+            Y: =282
+            ZIndex: =38
+
     PopUpDailyGroup As group:
         Height: =5
         Width: =5
@@ -2173,70 +2171,6 @@
             X: =547
             Y: =128
             ZIndex: =10
-
-    PopUpGroup As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =52
-
-        PopUpAllArea As rectangle:
-            Fill: =RGBA(0, 0, 0, 0.43)
-            Height: =680
-            Visible: =popUpEnable
-            Width: =1366
-            Y: =88
-            ZIndex: =11
-
-        PopUpContentArea As rectangle:
-            Height: =312
-            Visible: =popUpEnable
-            Width: =469
-            X: =448
-            Y: =272
-            ZIndex: =12
-
-        PopUpTitleLabel As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(56, 96, 178, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =71
-            Text: =popUpTitle
-            Visible: =popUpEnable
-            Width: =469
-            X: =448
-            Y: =272
-            ZIndex: =13
-
-        PopUpMessageLabel As label:
-            Align: =Align.Center
-            Fill: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =241
-            Text: =popUpMessage
-            Visible: =popUpEnable
-            Width: =469
-            X: =448
-            Y: =343
-            ZIndex: =14
-
-        PopUpCloseIcon As icon.Cancel:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({
-                    popUpEnable: false,
-                    popUpTitle: "",
-                    popUpMessage: ""
-                })
-            Visible: =popUpEnable
-            Width: =50
-            X: =855
-            Y: =282
-            ZIndex: =15
 
     PopUpPlanningGroup As group:
         Height: =5
