@@ -74,49 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpPlanningCloseIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpPlanningCloseIcon"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
               }
             }
           ],
@@ -128,6 +98,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -194,36 +194,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.TabIndex"
                 }
               ],
@@ -248,6 +218,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessCloseIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyToDoInProcessCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -314,49 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpPlanningTasksGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpPlanningTasksGallery"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
               }
             }
           ],
@@ -368,66 +338,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "BoardView",
-                "type": "BoardView.PopUpPlanningTasksGallery.NextArrow2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyTaskDropDown.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyTaskDropDown.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyTaskDropDown"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
         },
         {
           "locations": [
@@ -464,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpDailyPlayerName.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyPlayerName.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "FocusedBorderThickness",
                 "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
+                "type": "BoardView.PopUpDailyPlayerName"
               }
             }
           ],
@@ -486,68 +396,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -584,19 +434,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpDailyTaskDropDown.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyTaskDropDown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyTaskDropDown"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName"
+                "type": "BoardView.PopUpPlanningCloseIcon"
               }
             }
           ],
@@ -614,19 +494,169 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.PopUpCloseIcon"
+                "type": "BoardView.PopUpPlanningCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpPlanningTasksGallery.NextArrow2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpPlanningTasksGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpPlanningTasksGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpDailyPlayerName.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpDailyPlayerName.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BoardView",
+                "type": "BoardView.PopUpDailyPlayerName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.Separator3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.Separator3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.Separator3"
               }
             }
           ],
@@ -668,6 +698,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BoardView.PopUpCloseIcon.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BoardView.PopUpCloseIcon.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BoardView",
+                "type": "BoardView.PopUpCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -884,79 +944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName.FocusedBorderThickness"
+                  "fullyQualifiedName": "BoardView.Separator3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyTurnOptionsGallery.PopUpDailyPlayerName"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "BoardView",
-                "type": "BoardView.PopUpDailyTurnOptionsGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "BoardView.PopUpDailyTurnOptionsGallery.TabIndex",
+                  "fullyQualifiedName": "BoardView.Separator3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpDailyTurnOptionsGallery"
+                "type": "BoardView.Separator3"
               }
             }
           ],
@@ -2663,7 +2663,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"BoardView\" is 360, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"BoardView\" is 334, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
