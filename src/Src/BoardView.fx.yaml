@@ -2070,14 +2070,6 @@
             Y: =128
             ZIndex: =15
 
-    PopUpDailyToDoInProcessAllArea As rectangle:
-        Fill: =RGBA(0, 0, 0, 0.43)
-        Height: =680
-        Visible: =popUpDailyToDo2InProcessEnable
-        Width: =1366
-        Y: =88
-        ZIndex: =28
-
     PopUpDailyGroup As group:
         Height: =5
         Width: =5
@@ -2119,191 +2111,42 @@
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
-            Text: |-
-                =Concatenate(
-                    "Select your Tasks for this Sprint "
-                )
+            Height: =54
+            Text: =Upper("Select the task to be developed in this daily.")
             Visible: =popUpDailyEnable
-            Width: =237
-            X: =560
+            Width: =272
+            X: =547
             Y: =128
             ZIndex: =22
 
-        DailyPopUpVDivider As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(0, 0, 0, 1)
-            Height: =475
-            Visible: =popUpDailyEnable
-            Width: =2
-            X: =682
-            Y: =182
-            ZIndex: =23
+    RestartButton As button:
+        OnSelect: =Navigate(WelcomeView,ScreenTransition.Fade);
+        Text: ="RESTART"
+        X: =1180
+        Y: =24
+        ZIndex: =34
 
-        DailyToDoTasks As label:
-            Align: =Align.Center
-            Text: ="ToDo Tasks"
-            Visible: =popUpDailyEnable
-            X: =492
-            Y: =182
-            ZIndex: =24
-
-        DailyInProcessTasks As label:
-            Text: ="In Process Tasks"
-            Visible: =popUpDailyEnable
-            X: =722
-            Y: =182
-            ZIndex: =25
-
-        "DailyToDoTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            DelayItemLoading: =true
-            Height: =435
-            Items: =GamePlayers
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplatePadding: =0
-            TemplateSize: =104
-            Visible: =popUpDailyEnable
-            Width: =210
-            X: =462
-            Y: =222
-            ZIndex: =26
-
-            DailyToDoTaskName As label:
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =25
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =ThisItem.name
-                VerticalAlign: =VerticalAlign.Top
-                Width: =105
-                X: =52
-                Y: =10
-                ZIndex: =2
-
-            Separator2 As rectangle:
-                Height: =8
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
-
-            Dropdown3 As dropdown:
-                Default: ="Select an option"
-                Height: =28
-                Items: |-
-                    =Filter(
-                        Tasks,team = ThisItem.id && stage = TaskStageType.TODO
-                    )
-                OnSelect: =Select(Parent)
-                Width: =167
-                X: =21
-                Y: =46
-                ZIndex: =6
-
-        "DailyInProcessTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-            DelayItemLoading: =true
-            Height: =435
-            Items: =GamePlayers
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplatePadding: =0
-            TemplateSize: =104
-            Visible: =popUpDailyEnable
-            Width: =210
-            X: =692
-            Y: =222
-            ZIndex: =27
-
-            DailyInProcessTaskName As label:
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =25
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =ThisItem.name
-                VerticalAlign: =VerticalAlign.Top
-                Width: =105
-                X: =52
-                Y: =10
-                ZIndex: =2
-
-            DailyInProcessTask As rectangle:
-                Height: =8
-                OnSelect: =Select(Parent)
-                Width: =Parent.TemplateWidth
-                Y: =Parent.TemplateHeight - Self.Height
-                ZIndex: =5
-
-            DailyInProcessTaskDropdown As dropdown:
-                Height: =28
-                Items: |-
-                    =Filter(
-                        Tasks,team = ThisItem.id && stage = TaskStageType.IN_PROCESS
-                    )
-                OnSelect: =Select(Parent)
-                Width: =167
-                X: =21
-                Y: =46
-                ZIndex: =6
-
-    PopUpDailyToDoInProcessContentArea As rectangle:
-        Height: =570
-        Visible: =popUpDailyToDo2InProcessEnable
-        Width: =469
-        X: =468
-        Y: =127
-        ZIndex: =29
-
-    PopUpDailyToDoInProcessCloseIcon As icon.Cancel:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =50
-        Icon: =Icon.Cancel
-        OnSelect: |-
-            =UpdateContext({
-                popUpDailyToDo2InProcessEnable: false
-            })
-        Visible: =popUpDailyToDo2InProcessEnable
-        Width: =50
-        X: =887
-        Y: =128
-        ZIndex: =30
-
-    PopUpDailyToDoInProcessTitle As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =74
-        Text: ="Please move tasks from TODO to IN PROCESS if needed"
-        Visible: =popUpDailyToDo2InProcessEnable
-        Width: =295
-        X: =560
-        Y: =148
-        ZIndex: =31
-
-    "PopUpDailyToDoInProcessTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "PopUpDailyChooseTaskGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =435
-        Items: =GamePlayers
+        Height: =165
+        Items: |-
+            =Filter(
+                Players,
+                id = currentTurn
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =175
-        Visible: =popUpDailyToDo2InProcessEnable
-        Width: =405
-        X: =505
-        Y: =222
-        ZIndex: =32
+        TemplateSize: =162
+        Visible: =popUpDailyEnable
+        Width: =469
+        X: =448
+        Y: =193
+        ZIndex: =35
 
-        DailyTodoInProcessPlayerName As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =35
+        Subtitle2 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -2311,123 +2154,253 @@
             PaddingTop: =0
             Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
-            Width: =110
-            X: =31
-            Y: =36
-            ZIndex: =2
+            Width: =
+            X: =
+            Y: =
+            ZIndex: =3
 
-        Separator2_1 As rectangle:
+        Separator2 As rectangle:
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        TasksToDoDropdown As dropdown:
-            Default: ="Select an option"
-            Height: =50
-            Items: |-
-                =Filter(
-                    Tasks,team = ThisItem.id && stage = TaskStageType.TODO
-                )
-            OnChange: =Notify("OnChange",NotificationType.Information)  
-            OnSelect: =Select(Parent)
-            Width: =110
-            X: =31
-            Y: =71
-            ZIndex: =6
-
-        PopUpDailyToDoInProcessTasksInProcessGallery As gallery.galleryVertical:
-            DelayItemLoading: =true
-            Height: =117
-            Items: |-
-                =Filter(
-                    Tasks,team = ThisItem.id && stage = TaskStageType.IN_PROCESS
-                )
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =28
-            Width: =180
-            X: =225
-            Y: =50
-            ZIndex: =7
-
-            InProcessTasksName As label:
-                Height: =33
-                OnSelect: =Select(Parent)
-                Text: =ThisItem.name
-                X: =10
-                Y: =10
-                ZIndex: =1
-
-        MoveToDo2InProcessButton As button:
-            Fill: =RGBA(54, 176, 75, 1)
-            OnSelect: |-
-                =Update(
-                    Tasks,
-                    {
-                        team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
-                        name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
-                        SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
-                        counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
-                        stage: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage'
-                    },
-                    {
-                        team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
-                        name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
-                        SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
-                        counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
-                        stage: TaskStageType.IN_PROCESS
-                    }
-                );
-            Text: ="Move"
-            Width: =74
-            X: =151
-            Y: =76
-            ZIndex: =8
-
-        DailyTodoInProcessTitleInProcess As label:
+        Label1 As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
-            Height: =35
             OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: ="IN PROGRESS"
-            Width: =180
-            X: =225
-            Y: =10
-            ZIndex: =9
+            Text: =ThisItem.name
+            X: =159
+            Y: =14
+            ZIndex: =6
 
-    PopUpDailyToDoInProcessContinueButton As button:
-        DisplayMode: |-
-            =If(
-                CountRows(
-                GroupBy(
-                    Filter(Tasks, stage = TaskStageType.IN_PROCESS),"team","data"
+        PopUpDailyTaskDropDown As dropdown:
+            Items: |-
+                =Filter(
+                    Tasks,
+                    team=ThisItem.id,
+                    Or(TaskStageType.IN_PROCESS)
                 )
-            ) >= totalPlayers,
-                DisplayMode.Edit,
-                DisplayMode.Disabled
-            )
-        Fill: =RGBA(54, 176, 75, 1)
-        OnSelect: |-
-            =UpdateContext({
-                popUpDailyToDo2InProcessEnable: false
-            })
-        Text: ="Continue"
-        Visible: =popUpDailyToDo2InProcessEnable
-        X: =622
-        Y: =617
-        ZIndex: =33
+            OnSelect: =Select(Parent)
+            Visible: =popUpDailyEnable
+            Width: =176
+            X: =146
+            Y: =61
+            ZIndex: =7
 
-    Button6 As button:
-        OnSelect: =Navigate(WelcomeView,ScreenTransition.Fade);
-        Text: ="RESTART"
-        X: =1180
-        Y: =24
-        ZIndex: =34
+    PopUpDailyToDoInProcessGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        PopUpDailyToDoInProcessAllArea As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.43)
+            Height: =680
+            Visible: =popUpDailyToDo2InProcessEnable
+            Width: =1366
+            Y: =88
+            ZIndex: =28
+
+        PopUpDailyToDoInProcessContentArea As rectangle:
+            Height: =570
+            Visible: =popUpDailyToDo2InProcessEnable
+            Width: =469
+            X: =468
+            Y: =127
+            ZIndex: =29
+
+        PopUpDailyToDoInProcessCloseIcon As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    popUpDailyToDo2InProcessEnable: false
+                })
+            Visible: =popUpDailyToDo2InProcessEnable
+            Width: =50
+            X: =887
+            Y: =128
+            ZIndex: =30
+
+        PopUpDailyToDoInProcessTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =74
+            Text: ="Please move tasks from TODO to IN PROCESS if needed"
+            Visible: =popUpDailyToDo2InProcessEnable
+            Width: =295
+            X: =560
+            Y: =148
+            ZIndex: =31
+
+        "PopUpDailyToDoInProcessTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =435
+            Items: =GamePlayers
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =175
+            Visible: =popUpDailyToDo2InProcessEnable
+            Width: =405
+            X: =505
+            Y: =222
+            ZIndex: =32
+
+            DailyTodoInProcessPlayerName As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =ThisItem.name
+                VerticalAlign: =VerticalAlign.Top
+                Width: =110
+                X: =31
+                Y: =36
+                ZIndex: =2
+
+            Separator2_1 As rectangle:
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =5
+
+            TasksToDoDropdown As dropdown:
+                Default: ="Select an option"
+                Height: =50
+                Items: |-
+                    =Filter(
+                        Tasks,team = ThisItem.id && stage = TaskStageType.TODO
+                    )
+                OnChange: =Notify("OnChange",NotificationType.Information)  
+                OnSelect: =Select(Parent)
+                Width: =110
+                X: =31
+                Y: =71
+                ZIndex: =6
+
+            PopUpDailyToDoInProcessTasksInProcessGallery As gallery.galleryVertical:
+                DelayItemLoading: =true
+                Height: =117
+                Items: |-
+                    =Filter(
+                        Tasks,team = ThisItem.id && stage = TaskStageType.IN_PROCESS
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =28
+                Width: =180
+                X: =225
+                Y: =50
+                ZIndex: =7
+
+                InProcessTasksName As label:
+                    Height: =33
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.name
+                    X: =10
+                    Y: =10
+                    ZIndex: =1
+
+            MoveToDo2InProcessButton As button:
+                Fill: =RGBA(54, 176, 75, 1)
+                OnSelect: |-
+                    =Update(
+                        Tasks,
+                        {
+                            team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
+                            name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
+                            SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
+                            counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
+                            stage: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage'
+                        },
+                        {
+                            team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
+                            name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
+                            SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
+                            counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
+                            stage: TaskStageType.IN_PROCESS
+                        }
+                    );
+                Text: ="Move"
+                Width: =74
+                X: =151
+                Y: =76
+                ZIndex: =8
+
+            DailyTodoInProcessTitleInProcess As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =35
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: ="IN PROGRESS"
+                Width: =180
+                X: =225
+                Y: =10
+                ZIndex: =9
+
+        PopUpDailyToDoInProcessContinueButton As button:
+            DisplayMode: |-
+                =If(
+                    CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.IN_PROCESS),"team","data"
+                    )
+                ) >= totalPlayers,
+                    DisplayMode.Edit,
+                    DisplayMode.Disabled
+                )
+            Fill: =RGBA(54, 176, 75, 1)
+            OnSelect: |-
+                =UpdateContext({
+                    popUpDailyToDo2InProcessEnable: false
+                })
+            Text: ="Continue"
+            Visible: =popUpDailyToDo2InProcessEnable
+            X: =622
+            Y: =617
+            ZIndex: =33
+
+    PopUpDailyChooseCardTitle As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Text: ="CHOOSE A DAILY CARD"
+        Visible: =popUpDailyEnable
+        Width: =272
+        X: =542
+        Y: =370
+        ZIndex: =36
+
+    Button5 As button:
+        Fill: |-
+            =If(
+                PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname' = "TASK A",
+                RGBA(0, 134, 208, 1),
+                RGBA(255, 134, 208, 1)
+            )
+        Height: =218
+        Text: ="Button"
+        Visible: =popUpDailyEnable
+        X: =603
+        Y: =424
+        ZIndex: =37
 
