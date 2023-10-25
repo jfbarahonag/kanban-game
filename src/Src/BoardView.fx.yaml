@@ -35,6 +35,7 @@
         // game
         UpdateContext(
             {
+                currentCard: First(Shuffle(DailyNormalCards)),
                 currentRound: 1,
                 currentTurn: 1,
                 maxTurn: totalPlayers
@@ -1841,19 +1842,84 @@
             )
         Height: =204
         OnSelect: |-
-            =If(
+            =Update(
+                Tasks,
+                {
+                    team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                    name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                    SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                    counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                    stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                },
+                {
+                    team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                    name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                    SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                    counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + 1,
+                    stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                }
+            );
+            
+            If(
                 PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
+                UpdateContext({
+                    currentCard: First(Shuffle(DailyNormalCards))
+                });
+            
+                If(currentCard.type = EventResultType.INCREMENT,
+                    Update(
+                        Tasks,
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                            stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                        },
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + 1,
+                            stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                        }
+                    )
+                );
+                
+                If(currentCard.type = EventResultType.DECREMENT,
+                    Update(
+                        Tasks,
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                            stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                        },
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter - 1,
+                            stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                        }
+                    )
+                );
+            
                 UpdateContext({
                     popUpEnable: true,
                     popUpTitle: "DAILY CARD RESPONSE",
-                    popUpMessage: First(Shuffle(DailyNormalCards)).content
+                    popUpMessage: currentCard.content
                 }),
                 If(
                     PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
                     UpdateContext({
+                        currentCard: First(Shuffle(DailyNormalCards))
+                    });
+                    UpdateContext({
                         popUpEnable: true,
                         popUpTitle: "DAILY REVISION CARD RESPONSE",
-                        popUpMessage: First(Shuffle(DailyRevisionCards)).content
+                        popUpMessage: currentCard.content
                     })
                 )
             )
@@ -1869,7 +1935,7 @@
         Visible: =popUpDailyEnable
         Width: =176
         X: =593
-        Y: =461
+        Y: =469
         ZIndex: =33
 
     PopUpDailyToDoInProcessGroup As group:
