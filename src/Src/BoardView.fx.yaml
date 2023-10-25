@@ -19,7 +19,8 @@
         // popupDaily
         UpdateContext(
             {
-                popUpDailyEnable: false
+                popUpDailyEnable: false,
+                popUpDailyToDo2InProcessEnable: false
             }
         );
         
@@ -576,10 +577,23 @@
                         );
                     
                         If(
-                            // IS DAILY
-                            Index(Rounds, currentRound).type = RoundType.DAILY,
+                            // IS DAILY AND NOT ALL TEAMS HAS TASKS IN PROCESS AND HAS 
+                            And(
+                                Index(Rounds, currentRound).type = RoundType.DAILY,
+                                CountRows(
+                                    GroupBy(
+                                        Filter(Tasks, stage = TaskStageType.IN_PROCESS),"team","data"
+                                    )
+                                ) < totalPlayers,
+                                CountRows(
+                                    GroupBy(
+                                        Filter(Tasks, stage = TaskStageType.TODO),"team","data"
+                                    )
+                                ) > 0
+                            ),
                             UpdateContext({
-                                popUpDailyEnable: true
+                                //popUpDailyEnable: true
+                                popUpDailyToDo2InProcessEnable: true
                             })
                         );
                     )
@@ -2056,6 +2070,14 @@
             Y: =128
             ZIndex: =15
 
+    PopUpDailyToDoInProcessAllArea As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.43)
+        Height: =680
+        Visible: =popUpDailyToDo2InProcessEnable
+        Width: =1366
+        Y: =88
+        ZIndex: =28
+
     PopUpDailyGroup As group:
         Height: =5
         Width: =5
@@ -2228,4 +2250,87 @@
                 X: =21
                 Y: =46
                 ZIndex: =6
+
+    PopUpDailyToDoInProcessContentArea As rectangle:
+        Height: =570
+        Visible: =popUpDailyToDo2InProcessEnable
+        Width: =469
+        X: =468
+        Y: =127
+        ZIndex: =29
+
+    PopUpDailyToDoInProcessCloseIcon As icon.Cancel:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Cancel
+        OnSelect: |-
+            =UpdateContext({
+                popUpDailyToDo2InProcessEnable: false
+            })
+        Visible: =popUpDailyToDo2InProcessEnable
+        Width: =50
+        X: =887
+        Y: =128
+        ZIndex: =30
+
+    PopUpDailyToDoInProcessTitle As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =74
+        Text: ="Please move tasks from TODO to IN PROCESS if needed"
+        Visible: =popUpDailyToDo2InProcessEnable
+        Width: =295
+        X: =560
+        Y: =148
+        ZIndex: =31
+
+    "DailyToDoTasksGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =435
+        Items: =GamePlayers
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Visible: =popUpDailyToDo2InProcessEnable
+        Width: =405
+        X: =505
+        Y: =222
+        ZIndex: =32
+
+        DailyToDoTaskName_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =105
+            X: =52
+            Y: =10
+            ZIndex: =2
+
+        Separator2_1 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Dropdown3_1 As dropdown:
+            Default: ="Select an option"
+            Height: =28
+            Items: |-
+                =Filter(
+                    Tasks,team = ThisItem.id && stage = TaskStageType.TODO
+                )
+            OnSelect: =Select(Parent)
+            Width: =167
+            X: =21
+            Y: =46
+            ZIndex: =6
 
