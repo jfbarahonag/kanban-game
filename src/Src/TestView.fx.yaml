@@ -3,9 +3,29 @@ TestView As screen:
     Button2 As button:
         OnSelect: |-
             =UpdateContext({
-                counterTasksInBacklog: CountRows(
+                counterTeamsHasTasksInBacklog: CountRows(
                     GroupBy(
                         Filter(Tasks, stage = TaskStageType.BACKLOG),"team","data"
+                    )
+                ),
+                counterTeamsHasTasksInToDo: CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.TODO),"team","data"
+                    )
+                ),
+                counterTeamsHasTasksInProcess: CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.IN_PROCESS),"team","data"
+                    )
+                ),
+                counterTeamsHasTasksInReview: CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.REVIEW),"team","data"
+                    )
+                ),
+                counterTeamsHasTasksInCompleted: CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.COMPLETED),"team","data"
                     )
                 )
             })

@@ -2038,15 +2038,6 @@
                 Y: =8
                 ZIndex: =6
 
-            Label4 As label:
-                Height: =45
-                OnSelect: =Select(Parent)
-                Text: =If(ThisItem.IsSelected, "Selected")
-                Width: =91
-                X: =227
-                Y: =44
-                ZIndex: =7
-
         PopUpPlanningTitle As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)

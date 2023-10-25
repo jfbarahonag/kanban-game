@@ -2174,17 +2174,137 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TestView.counterTasksInBacklog"
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInBacklog"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TestView.counterTasksInBacklog",
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInBacklog",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "counterTasksInBacklog",
+                "member": "counterTeamsHasTasksInBacklog",
+                "module": "TestView",
+                "type": "TestView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInCompleted"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInCompleted",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "counterTeamsHasTasksInCompleted",
+                "module": "TestView",
+                "type": "TestView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInProcess"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInProcess",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "counterTeamsHasTasksInProcess",
+                "module": "TestView",
+                "type": "TestView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInReview"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInReview",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "counterTeamsHasTasksInReview",
+                "module": "TestView",
+                "type": "TestView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInToDo"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestView.counterTeamsHasTasksInToDo",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "counterTeamsHasTasksInToDo",
                 "module": "TestView",
                 "type": "TestView"
               }
