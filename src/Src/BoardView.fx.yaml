@@ -124,7 +124,7 @@
         LblAppName2 As label:
             Align: =Align.Center
             Height: =88
-            Text: ="Board Game"
+            Text: ="Kanban Board"
             Width: =Parent.Width
             ZIndex: =3
 
@@ -406,7 +406,7 @@
                     Text: |-
                         ="DAILY
                         IN PROCESS
-                        CARD"
+                        SITUATION"
                     X: =788
                     Y: =112
                     ZIndex: =28
@@ -432,7 +432,7 @@
                     Height: =124
                     Text: |-
                         ="REFINEMENT
-                        CARD"
+                        SITUATION"
                     X: =973
                     Y: =112
                     ZIndex: =30
@@ -466,7 +466,7 @@
                     Text: |-
                         ="DAILY
                         REVISION
-                        CARD"
+                        SITUATION"
                     X: =1159
                     Y: =112
                     ZIndex: =32
@@ -487,8 +487,8 @@
                             {
                                 gameStatus: GameStatusType.STARTED,
                                 popUpEnable: true, 
-                                popUpTitle: "The game has just begun", 
-                                popUpMessage: "Please click on Start Round Button" 
+                                popUpTitle: "The project has just begun", 
+                                popUpMessage: "Please click on 'Advance In The Sprint' Button" 
                             }
                         ),
                         // ---------- Start round logic
@@ -568,11 +568,12 @@
                             })
                         );
                     )
+                Size: =13
                 Text: |-
                     =If(
                         gameStatus = GameStatusType.NOT_STARTED,
-                        "Start Game",
-                        "Start Round"
+                        "Start Project",
+                        "Advance in the Sprint"
                     )
                 X: =110
                 Y: =311
@@ -608,7 +609,7 @@
                         })
                     );
                     
-                Text: ="Start Turn"
+                Text: ="Start Day"
                 X: =295
                 Y: =311
                 ZIndex: =35
@@ -637,7 +638,7 @@
                             turnStatus: GameStatusType.NOT_STARTED
                         })
                     )
-                Text: ="Finish Turn"
+                Text: ="Finish Day"
                 Width: =154
                 X: =489
                 Y: =311
@@ -1979,10 +1980,10 @@
         Text: |-
             =If(
                 PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
-                "GET A DAILY CARD",
+                "DISCUSS A DAILY SITUATION",
                 If(
                     PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
-                    "GET A DAILY REVISION CARD"
+                    "DISCUSS A DAILY SITUATION"
                 )
             )
         Visible: =popUpDailyEnable

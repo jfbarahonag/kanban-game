@@ -8,12 +8,12 @@ WelcomeView As screen:
             Table(
                 {
                     id: 1,
-                    name: "Player 1",
+                    name: "Team 1",
                     winner: false
                 },
                 {
                     id: 2,
-                    name: "Player 2",
+                    name: "Team 2",
                     winner: false
                 }
             )
@@ -269,7 +269,7 @@ WelcomeView As screen:
             =Navigate(
                 PlayersView
             )
-        Text: ="SELECT PLAYERS"
+        Text: ="SELECT TEAMS"
         Width: =179
         X: =826
         Y: =680

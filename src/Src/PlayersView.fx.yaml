@@ -101,7 +101,7 @@ PlayersView As screen:
                     Players,
                     {
                         id: CountRows(Players) + 1,
-                        name: Concatenate("Player ", CountRows(Players) + 1)
+                        name: Concatenate("Team ", CountRows(Players) + 1)
                     }
                 );
                 
