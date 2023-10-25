@@ -2292,7 +2292,7 @@
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =104
+        TemplateSize: =175
         Visible: =popUpDailyToDo2InProcessEnable
         Width: =405
         X: =505
@@ -2311,7 +2311,8 @@
             Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =110
-            X: =21
+            X: =31
+            Y: =36
             ZIndex: =2
 
         Separator2_1 As rectangle:
@@ -2331,22 +2332,23 @@
             OnChange: =Notify("OnChange",NotificationType.Information)  
             OnSelect: =Select(Parent)
             Width: =110
-            X: =21
-            Y: =35
+            X: =31
+            Y: =71
             ZIndex: =6
 
         PopUpDailyToDoInProcessTasksInProcessGallery As gallery.galleryVertical:
             DelayItemLoading: =true
-            Height: =104
+            Height: =131
             Items: |-
                 =Filter(
                     Tasks,team = ThisItem.id && stage = TaskStageType.IN_PROCESS
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =84
+            TemplateSize: =54
             Width: =180
             X: =225
+            Y: =36
             ZIndex: =7
 
             InProcessTasksName As label:
@@ -2379,8 +2381,8 @@
                 );
             Text: ="Move"
             Width: =74
-            X: =141
-            Y: =40
+            X: =151
+            Y: =76
             ZIndex: =8
 
     PopUpDailyToDoInProcessContinueButton As button:
