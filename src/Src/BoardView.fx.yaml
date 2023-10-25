@@ -2070,125 +2070,12 @@
             Y: =128
             ZIndex: =15
 
-    PopUpDailyGroup As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =28
-
-        PopUpDailyAllArea As rectangle:
-            Fill: =RGBA(0, 0, 0, 0.43)
-            Height: =680
-            Visible: =popUpDailyEnable
-            Width: =1366
-            Y: =88
-            ZIndex: =17
-
-        PopUpDailyContentArea As rectangle:
-            Height: =570
-            Visible: =popUpDailyEnable
-            Width: =469
-            X: =448
-            Y: =107
-            ZIndex: =18
-
-        PopUpDailyCloseIcon As icon.Cancel:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =50
-            Icon: =Icon.Cancel
-            OnSelect: |-
-                =UpdateContext({
-                    popUpDailyEnable: false
-                })
-            Visible: =popUpDailyEnable
-            Width: =50
-            X: =855
-            Y: =107
-            ZIndex: =20
-
-        PopUpDailyTitle As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            Height: =54
-            Text: =Upper("Select the task to be developed in this daily.")
-            Visible: =popUpDailyEnable
-            Width: =272
-            X: =547
-            Y: =128
-            ZIndex: =22
-
     RestartButton As button:
         OnSelect: =Navigate(WelcomeView,ScreenTransition.Fade);
         Text: ="RESTART"
         X: =1180
         Y: =24
         ZIndex: =34
-
-    "PopUpDailyChooseTaskGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =165
-        Items: |-
-            =Filter(
-                Players,
-                id = currentTurn
-            )
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =162
-        Visible: =popUpDailyEnable
-        Width: =469
-        X: =448
-        Y: =193
-        ZIndex: =35
-
-        Subtitle2 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.name
-            VerticalAlign: =VerticalAlign.Top
-            Width: =
-            X: =
-            Y: =
-            ZIndex: =3
-
-        Separator2 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
-        Label1 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.name
-            X: =159
-            Y: =14
-            ZIndex: =6
-
-        PopUpDailyTaskDropDown As dropdown:
-            Items: |-
-                =Filter(
-                    Tasks,
-                    team=ThisItem.id,
-                    Or(TaskStageType.IN_PROCESS)
-                )
-            OnSelect: =Select(Parent)
-            Visible: =popUpDailyEnable
-            Width: =176
-            X: =146
-            Y: =61
-            ZIndex: =7
 
     PopUpDailyToDoInProcessGroup As group:
         Height: =5
@@ -2284,7 +2171,7 @@
                     =Filter(
                         Tasks,team = ThisItem.id && stage = TaskStageType.TODO
                     )
-                OnChange: =Notify("OnChange",NotificationType.Information)  
+                OnChange: =
                 OnSelect: =Select(Parent)
                 Width: =110
                 X: =31
@@ -2378,29 +2265,168 @@
             Y: =617
             ZIndex: =33
 
-    PopUpDailyChooseCardTitle As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =54
-        Text: ="CHOOSE A DAILY CARD"
-        Visible: =popUpDailyEnable
-        Width: =272
-        X: =542
-        Y: =370
-        ZIndex: =36
-
-    Button5 As button:
-        Fill: |-
-            =If(
-                PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname' = "TASK A",
-                RGBA(0, 134, 208, 1),
-                RGBA(255, 134, 208, 1)
+    "PopUpDailyTurnOptionsGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =491
+        Items: |-
+            =Filter(
+                Players,
+                id = currentTurn
             )
-        Height: =218
-        Text: ="Button"
-        Visible: =popUpDailyEnable
-        X: =603
-        Y: =424
-        ZIndex: =37
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =490
+        Width: =467
+        X: =449
+        Y: =186
+        ZIndex: =42
+
+        Separator3 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =194
+            ZIndex: =5
+
+        PopUpDailyTaskDropDown As dropdown:
+            Items: |-
+                =Filter(
+                    Tasks,
+                    And(
+                        team=ThisItem.id,
+                        Or(
+                            stage=TaskStageType.IN_PROCESS,
+                            stage=TaskStageType.REVIEW
+                        )
+                    )
+                )
+            Visible: =popUpDailyEnable
+            Width: =176
+            X: =145
+            Y: =62
+            ZIndex: =6
+
+        PopUpDailyPlayerName As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Text: =ThisItem.name
+            Visible: =popUpDailyEnable
+            X: =158
+            ZIndex: =7
+
+        PopUpDailyChooseCardTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =54
+            Text: ="CHOOSE A DAILY CARD"
+            Visible: =popUpDailyEnable
+            Width: =272
+            X: =97
+            Y: =216
+            ZIndex: =8
+
+        PopUpDailyGetCardButton As button:
+            Fill: |-
+                =If(
+                    PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
+                    RGBA(0, 134, 208, 1),
+                    If(
+                        PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
+                        RGBA(127, 178, 57, 1)
+                    )
+                )
+            Height: =204
+            OnSelect: |-
+                =If(
+                    PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
+                    UpdateContext({
+                        popUpEnable: true,
+                        popUpTitle: "DAILY CARD RESPONSE",
+                        popUpMessage: LookUp(
+                            DailyNormalCards, 
+                            id=RandBetween(
+                                1, CountRows(DailyNormalCards)
+                            )
+                        ).content
+                    }),
+                    If(
+                        PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
+                        UpdateContext({
+                            popUpEnable: true,
+                            popUpTitle: "DAILY REVISION CARD RESPONSE",
+                            popUpMessage: LookUp(
+                            DailyRevisionCards, 
+                            id=RandBetween(
+                                1, CountRows(DailyRevisionCards)
+                            )
+                        ).content
+                        })
+                    )
+                )
+            Text: |-
+                =If(
+                    PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.IN_PROCESS,
+                    "GET A DAILY CARD",
+                    If(
+                        PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
+                        "GET A DAILY REVISION CARD"
+                    )
+                )
+            Visible: =popUpDailyEnable
+            Width: =176
+            X: =145
+            Y: =270
+            ZIndex: =9
+
+    PopUpDailyGroup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =47
+
+        PopUpDailyAllArea As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.43)
+            Height: =680
+            Visible: =popUpDailyEnable
+            Width: =1366
+            Y: =88
+            ZIndex: =43
+
+        PopUpDailyContentArea As rectangle:
+            Height: =570
+            Visible: =popUpDailyEnable
+            Width: =469
+            X: =448
+            Y: =107
+            ZIndex: =44
+
+        PopUpDailyCloseIcon As icon.Cancel:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =50
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    popUpDailyEnable: false
+                })
+            Visible: =popUpDailyEnable
+            Width: =50
+            X: =855
+            Y: =107
+            ZIndex: =45
+
+        PopUpDailyTitle As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =54
+            Text: =Upper("Select the task to be developed in this daily.")
+            Visible: =popUpDailyEnable
+            Width: =272
+            X: =547
+            Y: =128
+            ZIndex: =46
 
