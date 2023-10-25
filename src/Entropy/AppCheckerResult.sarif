@@ -2168,6 +2168,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TestView.counterTasksInBacklog"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TestView.counterTasksInBacklog",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "counterTasksInBacklog",
+                "module": "TestView",
+                "type": "TestView"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 2
         }
       ],
       "tool": {

@@ -134,6 +134,7 @@
     "WelcomeView",
     "InstructionsView",
     "PlayersView",
-    "BoardView"
+    "BoardView",
+    "TestView"
   ]
 }

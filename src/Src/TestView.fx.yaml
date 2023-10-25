@@ -1,0 +1,16 @@
+TestView As screen:
+
+    Button2 As button:
+        OnSelect: |-
+            =UpdateContext({
+                counterTasksInBacklog: CountRows(
+                    GroupBy(
+                        Filter(Tasks, stage = TaskStageType.BACKLOG),"team","data"
+                    )
+                )
+            })
+        Text: ="Button"
+        X: =584
+        Y: =340
+        ZIndex: =1
+
