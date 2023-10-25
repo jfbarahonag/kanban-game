@@ -1848,7 +1848,7 @@
                 UpdateContext({
                     currentCard: First(Shuffle(DailyNormalCards))
                 });
-                
+            
                 If(currentCard.type = EventResultType.INCREMENT,
                     Update(
                         Tasks,
@@ -1889,16 +1889,40 @@
                     )
                 );
             
+                // validate if counter >= SP
+                If(
+                    LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter >= LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                    Update(
+                        Tasks,
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                            stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                        },
+                        {
+                            team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                            name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                            SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                            stage: TaskStageType.REVIEW
+                        }
+                    )
+                );
+                // show card content
                 UpdateContext({
                     popUpEnable: true,
                     popUpTitle: "DAILY CARD RESPONSE",
                     popUpMessage: currentCard.content
                 }),
+                // task in review
                 If(
                     PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
                     UpdateContext({
                         currentCard: First(Shuffle(DailyNormalCards))
                     });
+                    // show card content
                     UpdateContext({
                         popUpEnable: true,
                         popUpTitle: "DAILY REVISION CARD RESPONSE",
