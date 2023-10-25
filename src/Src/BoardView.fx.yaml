@@ -1863,7 +1863,7 @@
                             team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
                             name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
                             SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
-                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + 1,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter + currentCard.counterValue,
                             stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
                         }
                     )
@@ -1883,7 +1883,7 @@
                             team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
                             name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
                             SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
-                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter - 1,
+                            counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter - currentCard.counterValue,
                             stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
                         }
                     )
@@ -1910,6 +1910,7 @@
                         }
                     )
                 );
+            
                 // show card content
                 UpdateContext({
                     popUpEnable: true,
@@ -1922,6 +1923,12 @@
                     UpdateContext({
                         currentCard: First(Shuffle(DailyNormalCards))
                     });
+            
+                    If(
+                        currentCard.type = EventResultType.DECREMENT,
+            
+                    );
+            
                     // show card content
                     UpdateContext({
                         popUpEnable: true,
