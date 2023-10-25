@@ -2328,9 +2328,32 @@
                 =Filter(
                     Tasks,team = ThisItem.id && stage = TaskStageType.TODO
                 )
+            OnChange: =Notify("OnChange",NotificationType.Information)  
             OnSelect: =Select(Parent)
             Width: =167
             X: =21
             Y: =46
             ZIndex: =6
+
+        Gallery2 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =104
+            Items: |-
+                =Filter(
+                    Tasks,team = ThisItem.id && stage = TaskStageType.IN_PROCESS
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =84
+            Width: =180
+            X: =225
+            ZIndex: =7
+
+            Label3 As label:
+                Height: =33
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.name
+                X: =12
+                Y: =8
+                ZIndex: =1
 
