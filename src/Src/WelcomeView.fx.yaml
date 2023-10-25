@@ -213,13 +213,13 @@ WelcomeView As screen:
                 {
                     id: 1,
                     content: "A BUG WAS FOUND DURING THE TESTING STAGE",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 1
                 },
                 {
                     id: 2,
                     content: "PRODUCT OWNER SAYS: FUNCTIONALITY HAS NOT BEEN COMPLETED",
-                    type: EventResultType.INCREMENT,
+                    type: EventResultType.DECREMENT,
                     counterValue: 3
                 },
                 {

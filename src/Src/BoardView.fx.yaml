@@ -1921,12 +1921,51 @@
                 If(
                     PopUpDailyTaskDropDown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage' = TaskStageType.REVIEW,
                     UpdateContext({
-                        currentCard: First(Shuffle(DailyNormalCards))
+                        currentCard: First(Shuffle(DailyRevisionCards))
                     });
             
                     If(
                         currentCard.type = EventResultType.DECREMENT,
+                        // move to in process and reduce the counter value
+                        Update(
+                            Tasks,
+                            {
+                                team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                                name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                                SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                                counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                                stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                            },
+                            {
+                                team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                                name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                                SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                                counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter - currentCard.counterValue,
+                                stage: TaskStageType.IN_PROCESS
+                            }
+                        )
+                    );
             
+                    If(
+                        currentCard.type = EventResultType.NOT_APPLY,
+                        // move to COMPLETED
+                        Update(
+                            Tasks,
+                            {
+                                team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                                name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                                SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                                counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                                stage: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).stage
+                            },
+                            {
+                                team: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).team,
+                                name: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).name,
+                                SP: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).SP,
+                                counter: LookUp(Tasks, team=currentTurn && name=PopUpDailyTaskDropDown.SelectedText.Value).counter,
+                                stage: TaskStageType.COMPLETED
+                            }
+                        )
                     );
             
                     // show card content
