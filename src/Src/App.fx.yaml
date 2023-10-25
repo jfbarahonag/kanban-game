@@ -28,6 +28,15 @@ App As appinfo:
                 COMPLETED: 4
             }
         );
+        
+        Set(
+            EventResultType,
+            {
+                DECREMENT: 0, 
+                INCREMENT: 1,
+                NOT_APPLY: 2
+            }
+        );
         // End Types
     Theme: =PowerAppsTheme
 

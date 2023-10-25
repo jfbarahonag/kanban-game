@@ -152,6 +152,116 @@ WelcomeView As screen:
         );
         // End tasks config
         
+        // Start cards config
+        ClearCollect(
+            DailyNormalCards,
+            Table(
+                {
+                    id: 1,
+                    content: "THE TEAM TO YOUR RIGHT ASKS YOU FOR 1 WORKFORCE",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 2,
+                    content: "THE TEAM TO YOUR LEFT ASKS YOU FOR 1 WORKFORCE",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 3,
+                    content: "YOU GIVE 1 WORKFORCE TO THE TEAM YOU CHOOSE",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 4,
+                    content: "YOU LOSE 1 WORKFORCE",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 5,
+                    content: "YOU ASK FOR 1 WORKFORCE FROM THE TEAM TO YOUR RIGHT",
+                    type: EventResultType.DECREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 6,
+                    content: "YOU ASK FOR 1 WORKFORCE FROM THE TEAM TO YOUR LEFT",
+                    type: EventResultType.DECREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 7,
+                    content: "YOU ASK FOR 1 WORKFORCE TO THE TEAM YOU CHOOSE",
+                    type: EventResultType.DECREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 8,
+                    content: "YOU WIN 1 WORKFORCE",
+                    type: EventResultType.DECREMENT,
+                    counterValue: 1
+                }
+            )
+        );
+        
+        ClearCollect(
+            DailyRevisionCards,
+            Table(
+                {
+                    id: 1,
+                    content: "A BUG WAS FOUND DURING THE TESTING STAGE",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 2,
+                    content: "PRODUCT OWNER SAYS: FUNCTIONALITY HAS NOT BEEN COMPLETED",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 3
+                },
+                {
+                    id: 3,
+                    content: "TESTING STAGE SATISFACTORY APPROVED",
+                    type: EventResultType.NOT_APPLY,
+                    counterValue: 0
+                }
+            )
+        );
+        
+        ClearCollect(
+            RefinementCards,
+            Table(
+                {
+                    id: 1,
+                    content: "REFINED TASK",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 1
+                },
+                {
+                    id: 2,
+                    content: "REFINED TASK",
+                    type: EventResultType.INCREMENT,
+                    counterValue: 2
+                },
+                {
+                    id: 3,
+                    content: "REFINED TASK",
+                    type: EventResultType.DECREMENT,
+                    counterValue: -1
+                },
+                {
+                    id: 4,
+                    content: "REFINED TASK",
+                    type: EventResultType.DECREMENT,
+                    counterValue: -2
+                }
+            )
+        );
+        // End cards config
+        
 
     StartButton As button:
         Fill: =RGBA(54, 176, 75, 1)
