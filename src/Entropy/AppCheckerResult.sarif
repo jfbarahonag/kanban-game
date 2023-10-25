@@ -14,156 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersGallery.PlayersInput"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersAddButton"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "PlayersView",
-                "type": "PlayersView.PlayersAddButton"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "BoardView.Canvas2.KANBANBOARD.TeamsTasksGroup.AccessibleLabel"
                 }
               ],
@@ -224,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_1.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_1.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.PopUpCloseIcon_1"
+                "type": "BoardView.PopUpPlanningCloseIcon"
               }
             }
           ],
@@ -254,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_1.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_1.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningCloseIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpCloseIcon_1"
+                "type": "BoardView.PopUpPlanningCloseIcon"
               }
             }
           ],
@@ -284,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_2.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyCloseIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_2.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpDailyCloseIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.PopUpCloseIcon_2"
+                "type": "BoardView.PopUpDailyCloseIcon"
               }
             }
           ],
@@ -314,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_2.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpDailyCloseIcon.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PopUpCloseIcon_2.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyCloseIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PopUpCloseIcon_2"
+                "type": "BoardView.PopUpDailyCloseIcon"
               }
             }
           ],
@@ -404,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.PlanningTasksGallery"
+                "type": "BoardView.PopUpPlanningTasksGallery"
               }
             }
           ],
@@ -434,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PlanningTasksGallery"
+                "type": "BoardView.PopUpPlanningTasksGallery"
               }
             }
           ],
@@ -464,19 +314,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.NextArrow2.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.PlanningTasksGallery.NextArrow2.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpPlanningTasksGallery.NextArrow2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.PlanningTasksGallery.NextArrow2"
+                "type": "BoardView.PopUpPlanningTasksGallery.NextArrow2"
               }
             }
           ],
@@ -717,6 +567,156 @@
                 "member": "TabIndex",
                 "module": "BoardView",
                 "type": "BoardView.PopUpCloseIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersGallery.PlayersInput.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersGallery.PlayersInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersAddButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PlayersView.PlayersAddButton.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PlayersView",
+                "type": "PlayersView.PlayersAddButton"
               }
             }
           ],
@@ -2213,17 +2213,17 @@
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
-                  "text": "Variable no utilizada"
+                  "text": "Unused variable"
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Quite la variable no utilizada."
+                  "Remove the unused variable."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Esta variable está declarada, pero ningún control hace referencia a ella, por lo que no es necesaria."
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],

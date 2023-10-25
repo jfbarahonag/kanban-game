@@ -1880,7 +1880,7 @@
         Y: =40
         ZIndex: =18
 
-        PopUpAllArea_1 As rectangle:
+        PopUpPlanningAllArea As rectangle:
             Fill: =RGBA(0, 0, 0, 0.43)
             Height: =680
             Visible: =popUpPlanningEnable
@@ -1888,7 +1888,7 @@
             Y: =88
             ZIndex: =10
 
-        PopUpContentArea_1 As rectangle:
+        PopUpPlanningContentArea As rectangle:
             Height: =570
             Visible: =popUpPlanningEnable
             Width: =469
@@ -1896,7 +1896,7 @@
             Y: =107
             ZIndex: =11
 
-        PopUpTitleLabel_1 As label:
+        PopUpPlanningTitleLabel As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(56, 96, 178, 1)
@@ -1909,7 +1909,7 @@
             Y: =272
             ZIndex: =12
 
-        PopUpCloseIcon_1 As icon.Cancel:
+        PopUpPlanningCloseIcon As icon.Cancel:
             Color: =RGBA(255, 255, 255, 1)
             Height: =50
             Icon: =Icon.Cancel
@@ -1923,7 +1923,7 @@
             Y: =107
             ZIndex: =13
 
-        "PlanningTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        "PopUpPlanningTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =419
             Items: |-
@@ -2047,7 +2047,7 @@
                 Y: =44
                 ZIndex: =7
 
-        player As label:
+        PopUpPlanningTitle As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2072,7 +2072,7 @@
         Y: =40
         ZIndex: =28
 
-        PopUpAllArea_2 As rectangle:
+        PopUpDailyAllArea As rectangle:
             Fill: =RGBA(0, 0, 0, 0.43)
             Height: =680
             Visible: =popUpDailyEnable
@@ -2080,7 +2080,7 @@
             Y: =88
             ZIndex: =17
 
-        PopUpContentArea_2 As rectangle:
+        PopUpDailyContentArea As rectangle:
             Height: =570
             Visible: =popUpDailyEnable
             Width: =469
@@ -2088,7 +2088,7 @@
             Y: =107
             ZIndex: =18
 
-        PopUpCloseIcon_2 As icon.Cancel:
+        PopUpDailyCloseIcon As icon.Cancel:
             Color: =RGBA(255, 255, 255, 1)
             Height: =50
             Icon: =Icon.Cancel
@@ -2102,7 +2102,7 @@
             Y: =107
             ZIndex: =20
 
-        DailyTitle As label:
+        PopUpDailyTitle As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
