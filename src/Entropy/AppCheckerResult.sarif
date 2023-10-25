@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.DailyToDoTasksGallery_1"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
               }
             }
           ],
@@ -824,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.DailyToDoTasksGallery_1"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery"
               }
             }
           ],
@@ -854,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Dropdown3_1.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Dropdown3_1.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.DailyToDoTasksGallery_1.Dropdown3_1"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.TasksToDoDropdown"
               }
             }
           ],
@@ -884,19 +884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "BoardView",
-                "type": "BoardView.DailyToDoTasksGallery_1.Gallery2"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
               }
             }
           ],
@@ -914,19 +914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Gallery2.TabIndex"
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "BoardView.DailyToDoTasksGallery_1.Gallery2.TabIndex",
+                  "fullyQualifiedName": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "BoardView",
-                "type": "BoardView.DailyToDoTasksGallery_1.Gallery2"
+                "type": "BoardView.PopUpDailyToDoInProcessTasksGallery.PopUpDailyToDoInProcessTasksInProcessGallery"
               }
             }
           ],
@@ -2616,7 +2616,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"BoardView\" is 361, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"BoardView\" is 367, which exceeds the maximum threshold recommended (300)."
               }
             },
             {

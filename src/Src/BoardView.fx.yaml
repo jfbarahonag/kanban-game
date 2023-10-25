@@ -2285,7 +2285,7 @@
         Y: =148
         ZIndex: =31
 
-    "DailyToDoTasksGallery_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "PopUpDailyToDoInProcessTasksGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =435
         Items: =GamePlayers
@@ -2299,9 +2299,10 @@
         Y: =222
         ZIndex: =32
 
-        DailyToDoTaskName_1 As label:
+        DailyTodoInProcessPlayerName As label:
+            Align: =Align.Center
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =25
+            Height: =35
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -2309,9 +2310,8 @@
             PaddingTop: =0
             Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
-            Width: =105
-            X: =52
-            Y: =10
+            Width: =110
+            X: =21
             ZIndex: =2
 
         Separator2_1 As rectangle:
@@ -2321,21 +2321,21 @@
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        Dropdown3_1 As dropdown:
+        TasksToDoDropdown As dropdown:
             Default: ="Select an option"
-            Height: =28
+            Height: =50
             Items: |-
                 =Filter(
                     Tasks,team = ThisItem.id && stage = TaskStageType.TODO
                 )
             OnChange: =Notify("OnChange",NotificationType.Information)  
             OnSelect: =Select(Parent)
-            Width: =167
+            Width: =110
             X: =21
-            Y: =46
+            Y: =35
             ZIndex: =6
 
-        Gallery2 As gallery.galleryVertical:
+        PopUpDailyToDoInProcessTasksInProcessGallery As gallery.galleryVertical:
             DelayItemLoading: =true
             Height: =104
             Items: |-
@@ -2349,11 +2349,54 @@
             X: =225
             ZIndex: =7
 
-            Label3 As label:
+            InProcessTasksName As label:
                 Height: =33
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.name
                 X: =12
                 Y: =8
                 ZIndex: =1
+
+        MoveToDo2InProcessButton As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            OnSelect: |-
+                =Update(
+                    Tasks,
+                    {
+                        team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
+                        name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
+                        SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
+                        counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
+                        stage: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bstage'
+                    },
+                    {
+                        team: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bteam',
+                        name: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bname',
+                        SP: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1BSP',
+                        counter: TasksToDoDropdown.SelectedText.'data-ADB4D7A662F548B49FAC2B986E348A1Bcounter',
+                        stage: TaskStageType.IN_PROCESS
+                    }
+                );
+            Text: ="Move"
+            Width: =74
+            X: =141
+            Y: =40
+            ZIndex: =8
+
+    PopUpDailyToDoInProcessContinueButton As button:
+        DisplayMode: |-
+            =If(
+                CountRows(
+                GroupBy(
+                    Filter(Tasks, stage = TaskStageType.IN_PROCESS),"team","data"
+                )
+            ) >= totalPlayers,
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Fill: =RGBA(54, 176, 75, 1)
+        Text: ="Continue"
+        X: =622
+        Y: =617
+        ZIndex: =33
 
